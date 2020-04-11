@@ -1,0 +1,31 @@
+{
+  "name": "tree-sitter-janet",
+  "version": "0.0.0",
+  "description": "Janet grammar for tree-sitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrayJack/tree-sitter-janet.git"
+  },
+  "keywords": [
+    "janet",
+    "parser",
+    "tree-sitter",
+    "treesitter"
+  ],
+  "author": "Eric Shimizu Karbstein <gr41.j4ck@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GrayJack/tree-sitter-janet/issues"
+  },
+  "homepage": "https://github.com/GrayJack/tree-sitter-janet#readme",
+  "dependencies": {
+    "nan": "^2.14.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.16.5"
+  }
+}

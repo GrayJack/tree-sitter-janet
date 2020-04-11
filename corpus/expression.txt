@@ -1,0 +1,22 @@
+============================================
+Symbol and Keyword
+============================================
+
+syn?
+syn-
+syn*
+syn
+:key
+(syn)
+(:key)
+
+---
+
+(source_file
+  (symbol)
+  (symbol)
+  (symbol)
+  (symbol)
+  (keyword)
+  (symbol)
+  (keyword))
