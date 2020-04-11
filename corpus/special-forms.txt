@@ -1,0 +1,403 @@
+============================================
+Def
+============================================
+
+(def a 10)
+(def b "aaaa")
+(def c (1 2 3))
+(def a (+ 1 2 (* 3 4)))
+
+---
+
+(source_file
+  (def
+    name: (symbol)
+    value: (number_literal))
+  (def
+    name: (symbol)
+    value: (str_literal))
+  (def
+    name: (symbol)
+    value: (tuple
+      item: (number_literal)
+      item: (number_literal)
+      item: (number_literal)))
+  (def
+    name: (symbol)
+    value: (tuple
+      item: (symbol)
+      item: (number_literal)
+      item: (number_literal)
+      item: (tuple
+        item: (symbol)
+        item: (number_literal)
+        item: (number_literal)))))
+
+============================================
+Var
+============================================
+
+(var a 10)
+(var b "aaaa")
+(var c (1 2 3))
+(var a (+ 1 2 (* 3 4)))
+
+---
+
+(source_file
+  (var
+    name: (symbol)
+    value: (number_literal))
+  (var
+    name: (symbol)
+    value: (str_literal))
+  (var
+    name: (symbol)
+    value: (tuple
+      item: (number_literal)
+      item: (number_literal)
+      item: (number_literal)))
+  (var
+    name: (symbol)
+    value: (tuple
+      item: (symbol)
+      item: (number_literal)
+      item: (number_literal)
+      item: (tuple
+        item: (symbol)
+        item: (number_literal)
+        item: (number_literal)))))
+
+============================================
+Quote
+============================================
+
+(quote a)
+(quote 10)
+(quote "str")
+(quote (+ 10 20))
+(quote (var a 10))
+
+---
+
+(source_file
+  (quote
+    (symbol))
+  (quote
+    (number_literal))
+  (quote
+    (str_literal))
+  (quote
+    (tuple
+      item: (symbol)
+      item: (number_literal)
+      item: (number_literal)))
+  (quote
+    (var
+      name: (symbol)
+      value: (number_literal))))
+
+============================================
+Splice
+============================================
+
+(splice a)
+(splice 10)
+(splice "str")
+(splice (+ 10 20))
+(splice (var a 10))
+
+---
+
+(source_file
+  (splice
+    (symbol))
+  (splice
+    (number_literal))
+  (splice
+    (str_literal))
+  (splice
+    (tuple
+      item: (symbol)
+      item: (number_literal)
+      item: (number_literal)))
+  (splice
+    (var
+      name: (symbol)
+      value: (number_literal))))
+
+============================================
+Quasiquote
+============================================
+
+(quasiquote a)
+(quasiquote 10)
+(quasiquote "str")
+(quasiquote (+ 10 20))
+(quasiquote (var a 10))
+
+---
+
+(source_file
+  (quasiquote
+    (symbol))
+  (quasiquote
+    (number_literal))
+  (quasiquote
+    (str_literal))
+  (quasiquote
+    (tuple
+      item: (symbol)
+      item: (number_literal)
+      item: (number_literal)))
+  (quasiquote
+    (var
+      name: (symbol)
+      value: (number_literal))))
+
+============================================
+Unquote
+============================================
+
+(unquote a)
+(unquote 10)
+(unquote "str")
+(unquote (+ 10 20))
+(unquote (var a 10))
+
+---
+
+(source_file
+  (unquote
+    (symbol))
+  (unquote
+    (number_literal))
+  (unquote
+    (str_literal))
+  (unquote
+    (tuple
+      item: (symbol)
+      item: (number_literal)
+      item: (number_literal)))
+  (unquote
+    (var
+      name: (symbol)
+      value: (number_literal))))
+
+============================================
+Break
+============================================
+
+(break)
+(break 10)
+(break a)
+
+---
+
+(source_file
+  (break)
+  (break
+    (number_literal))
+  (break
+    (symbol)))
+
+============================================
+Set
+============================================
+
+(set x 11)
+(set x nil)
+(set (tab :property) "hello")
+
+---
+
+(source_file
+  (set
+    l_value: (symbol)
+    r_value: (number_literal))
+  (set
+    l_value: (symbol)
+    r_value: (nil_literal))
+  (set
+    l_value: (tuple
+      item: (symbol)
+      item: (keyword))
+    r_value: (str_literal)))
+
+============================================
+If
+============================================
+
+(if true 10)
+(if false 10)
+(if true (print 1) (print 2))
+(if 0 (print 1) (print 2))
+(if nil (print 1) (print 2))
+(if @[] (print 1) (print 2))
+
+---
+
+(source_file
+  (if
+    condition: (bool_literal)
+    then: (number_literal))
+  (if
+    condition: (bool_literal)
+    then: (number_literal))
+  (if
+    condition: (bool_literal)
+    then: (tuple
+      item: (symbol)
+      item: (number_literal))
+    else: (tuple
+      item: (symbol)
+      item: (number_literal)))
+  (if
+    condition: (number_literal)
+    then: (tuple
+      item: (symbol)
+      item: (number_literal))
+    else: (tuple
+      item: (symbol)
+      item: (number_literal)))
+  (if
+    condition: (nil_literal)
+    then: (tuple
+      item: (symbol)
+      item: (number_literal))
+    else: (tuple
+      item: (symbol)
+      item: (number_literal)))
+  (if
+    condition: (sqr_array)
+    then: (tuple
+      item: (symbol)
+      item: (number_literal))
+    else: (tuple
+      item: (symbol)
+      item: (number_literal))))
+
+============================================
+Do
+============================================
+
+(do 1 2 3 4)
+(do (print 1) (print 2) (print 3))
+(do
+ (def a 1)
+ (print a))
+
+---
+
+(source_file
+  (do
+    form: (number_literal)
+    form: (number_literal)
+    form: (number_literal)
+    form: (number_literal))
+  (do
+    form: (tuple
+      item: (symbol)
+      item: (number_literal))
+    form: (tuple
+      item: (symbol)
+      item: (number_literal))
+    form: (tuple
+      item: (symbol)
+      item: (number_literal)))
+  (do
+    form: (def
+      name: (symbol)
+      value: (number_literal))
+    form: (tuple
+      item: (symbol)
+      item: (symbol))))
+
+============================================
+While
+============================================
+
+(while (< i 10)
+ (print i)
+ (++ i))
+
+---
+
+(source_file
+  (while
+    condition: (tuple
+      item: (symbol)
+      item: (symbol)
+      item: (number_literal))
+    form: (tuple
+      item: (symbol)
+      item: (symbol))
+    form: (tuple
+      item: (symbol)
+      item: (symbol))))
+
+============================================
+Fn
+============================================
+
+(fn [])
+(fn [x] x)
+(fn identity [x] x)
+(fn [] 1 2 3 4 5)
+(fn [x y] (+ x y))
+(fn [& args] (length args))
+(fn [w x y z &] (tuple w w x x y y z z))
+
+---
+
+(source_file
+  (fn
+    parameters: (fn_parameters))
+  (fn
+    parameters: (fn_parameters
+      parameter: (symbol))
+    form: (symbol))
+  (fn
+    name: (symbol)
+    parameters: (fn_parameters
+      parameter: (symbol))
+    form: (symbol))
+  (fn
+    parameters: (fn_parameters)
+    form: (number_literal)
+    form: (number_literal)
+    form: (number_literal)
+    form: (number_literal)
+    form: (number_literal))
+  (fn
+    parameters: (fn_parameters
+      parameter: (symbol)
+      parameter: (symbol))
+    form: (tuple
+      item: (symbol)
+      item: (symbol)
+      item: (symbol)))
+  (fn
+    parameters: (fn_parameters
+      parameter: (symbol)
+      parameter: (symbol))
+    form: (tuple
+      item: (symbol)
+      item: (symbol)))
+  (fn
+    parameters: (fn_parameters
+      parameter: (symbol)
+      parameter: (symbol)
+      parameter: (symbol)
+      parameter: (symbol)
+      parameter: (symbol))
+    form: (tuple
+      item: (symbol)
+      item: (symbol)
+      item: (symbol)
+      item: (symbol)
+      item: (symbol)
+      item: (symbol)
+      item: (symbol)
+      item: (symbol)
+      item: (symbol))))

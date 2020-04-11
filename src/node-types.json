@@ -16,7 +16,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -37,6 +57,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -66,6 +102,18 @@
           {
             "type": "tuple",
             "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
           }
         ]
       }
@@ -75,6 +123,125 @@
     "type": "bool_literal",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "break",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "buffer_literal",
@@ -89,6 +256,760 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "def",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "symbol",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "do",
+    "named": true,
+    "fields": {
+      "form": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "fn",
+    "named": true,
+    "fields": {
+      "form": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "symbol",
+            "named": true
+          }
+        ]
+      },
+      "parameters": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_parameters",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "fn_parameters",
+    "named": true,
+    "fields": {
+      "parameter": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "symbol",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "if",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      },
+      "else": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      },
+      "then": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -127,12 +1048,12 @@
     "fields": {}
   },
   {
-    "type": "source_file",
+    "type": "quasiquote",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -143,7 +1064,27 @@
           "named": true
         },
         {
+          "type": "break",
+          "named": true
+        },
+        {
           "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
           "named": true
         },
         {
@@ -164,6 +1105,22 @@
         },
         {
           "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splice",
           "named": true
         },
         {
@@ -193,17 +1150,148 @@
         {
           "type": "tuple",
           "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
         }
       ]
     }
   },
   {
-    "type": "sqr_array",
+    "type": "quote",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set",
     "named": true,
     "fields": {
-      "item": {
-        "multiple": true,
-        "required": false,
+      "l_value": {
+        "multiple": false,
+        "required": true,
         "types": [
           {
             "type": "array",
@@ -214,7 +1302,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -235,6 +1343,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -263,6 +1387,490 @@
           },
           {
             "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      },
+      "r_value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "splice",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sqr_array",
+    "named": true,
+    "fields": {
+      "item": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -286,7 +1894,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -307,6 +1935,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -335,6 +1979,18 @@
           },
           {
             "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -373,7 +2029,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -394,6 +2070,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -422,6 +2114,18 @@
           },
           {
             "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -439,7 +2143,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -460,6 +2184,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -488,6 +2228,18 @@
           },
           {
             "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -511,7 +2263,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -532,6 +2304,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -560,6 +2348,18 @@
           },
           {
             "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -577,7 +2377,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -598,6 +2418,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -626,6 +2462,18 @@
           },
           {
             "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -649,7 +2497,27 @@
             "named": true
           },
           {
+            "type": "break",
+            "named": true
+          },
+          {
             "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
             "named": true
           },
           {
@@ -670,6 +2538,22 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -698,6 +2582,501 @@
           },
           {
             "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "unquote",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "symbol",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "while",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      },
+      "form": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -749,11 +3128,31 @@
     "named": false
   },
   {
+    "type": "break",
+    "named": false
+  },
+  {
+    "type": "def",
+    "named": false
+  },
+  {
+    "type": "do",
+    "named": false
+  },
+  {
     "type": "escape_sequence",
     "named": true
   },
   {
     "type": "false",
+    "named": false
+  },
+  {
+    "type": "fn",
+    "named": false
+  },
+  {
+    "type": "if",
     "named": false
   },
   {
@@ -765,11 +3164,39 @@
     "named": true
   },
   {
+    "type": "quasiquote",
+    "named": false
+  },
+  {
+    "type": "quote",
+    "named": false
+  },
+  {
+    "type": "set",
+    "named": false
+  },
+  {
+    "type": "splice",
+    "named": false
+  },
+  {
     "type": "symbol",
     "named": true
   },
   {
     "type": "true",
+    "named": false
+  },
+  {
+    "type": "unquote",
+    "named": false
+  },
+  {
+    "type": "var",
+    "named": false
+  },
+  {
+    "type": "while",
     "named": false
   },
   {

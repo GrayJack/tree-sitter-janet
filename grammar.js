@@ -15,6 +15,7 @@ module.exports = grammar({
     _expr: $ => choice(
       $._literals,
       $._identifier,
+      $._special_forms,
       $.array,
       $.sqr_array,
       $.tuple,
@@ -62,6 +63,119 @@ module.exports = grammar({
     _struct_tables_commom: $ => seq(
       field('key', $._expr),
       field('value', $._expr),
+    ),
+
+    _special_forms: $ => choice(
+      $.def,
+      $.var,
+      $.quote,
+      $.splice,
+      $.quasiquote,
+      $.unquote,
+      $.break,
+      $.set,
+      $.if,
+      $.do,
+      $.while,
+      $.fn,
+    ),
+
+    def: $ => seq(
+      '(',
+      'def',
+      field('name', $.symbol),
+      field('value', $._expr),
+      ')'
+    ),
+
+    var: $ => seq(
+      '(',
+      'var',
+      field('name', $.symbol),
+      field('value', $._expr),
+      ')'
+    ),
+
+    quote: $ => seq(
+      '(',
+      'quote',
+      $._expr,
+      ')'
+    ),
+
+    splice: $ => seq(
+      '(',
+      'splice',
+      $._expr,
+      ')'
+    ),
+
+    quasiquote: $ => seq(
+      '(',
+      'quasiquote',
+      $._expr,
+      ')'
+    ),
+
+    unquote: $ => seq(
+      '(',
+      'unquote',
+      $._expr,
+      ')'
+    ),
+
+    break: $ => seq(
+      '(',
+      'break',
+      optional($._expr),
+      ')'
+    ),
+
+    set: $ => seq(
+      '(',
+      'set',
+      field('l_value', $._expr),
+      field('r_value', $._expr),
+      ')'
+    ),
+
+    if: $ => seq(
+      '(',
+      'if',
+      field('condition', $._expr),
+      field('then', $._expr),
+      optional(field('else', $._expr)),
+      ')'
+    ),
+
+    do: $ => seq(
+      '(',
+      'do',
+      repeat(field('form', $._expr)),
+      ')'
+    ),
+
+    while: $ => seq(
+      '(',
+      'while',
+      field('condition', $._expr),
+      repeat(field('form', $._expr)),
+      ')'
+    ),
+
+    fn: $ => seq(
+      '(',
+      'fn',
+      optional(field('name', $.symbol)),
+      field('parameters', $.fn_parameters),
+      repeat(field('form', $._expr)),
+      ')'
+    ),
+
+    fn_parameters: $ => seq(
+      '[',
+      repeat(field('parameter', $.symbol)),
+      ']'
     ),
 
     _literals: $ => choice(
