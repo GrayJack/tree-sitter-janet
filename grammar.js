@@ -16,6 +16,7 @@ module.exports = grammar({
       $._literals,
       $._identifier,
       $._special_forms,
+      // $._shorthand,
       $.array,
       $.sqr_array,
       $.tuple,
@@ -83,7 +84,8 @@ module.exports = grammar({
     def: $ => seq(
       '(',
       'def',
-      field('name', $.symbol),
+      field('name', $._identifier),
+      optional(field('doc_string', $.doc_str)),
       field('value', $._expr),
       ')'
     ),
@@ -91,7 +93,8 @@ module.exports = grammar({
     var: $ => seq(
       '(',
       'var',
-      field('name', $.symbol),
+      field('name', $._identifier),
+      optional(field('doc_string', $.doc_str)),
       field('value', $._expr),
       ')'
     ),
@@ -166,7 +169,8 @@ module.exports = grammar({
     fn: $ => seq(
       '(',
       'fn',
-      optional(field('name', $.symbol)),
+      optional(field('name', $._identifier)),
+      optional(field('doc_string', $.doc_str)),
       field('parameters', $.fn_parameters),
       repeat(field('form', $._expr)),
       ')'
@@ -245,8 +249,17 @@ module.exports = grammar({
       )
     ),
 
+    doc_str: $ => choice($.str_literal, $.long_str_literal),
+
     // identifier
-    _identifier: $ => choice($.symbol, $.keyword),
+    _identifier: $ => choice($.symbol, $.keyword, $.scoped_symbol),
+
+    scoped_symbol: $ => seq(
+      field('path', alias($.symbol, $.module_symbol)),
+      '/',
+      choice($.scoped_symbol, $.symbol),
+    ),
+
     keyword: $ => /:[a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
     symbol: $ => /[a-zA-Zα-ωΑ-Ωµ!@$%^&*_+=|~<>.?\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
   }

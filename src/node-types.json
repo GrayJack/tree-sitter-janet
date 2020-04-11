@@ -68,6 +68,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -193,6 +197,10 @@
           "named": true
         },
         {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
           "type": "set",
           "named": true
         },
@@ -262,10 +270,28 @@
     "type": "def",
     "named": true,
     "fields": {
+      "doc_string": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "doc_str",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
+            "named": true
+          },
           {
             "type": "symbol",
             "named": true
@@ -334,6 +360,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -457,6 +487,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -509,9 +543,34 @@
     }
   },
   {
+    "type": "doc_str",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "fn",
     "named": true,
     "fields": {
+      "doc_string": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "doc_str",
+            "named": true
+          }
+        ]
+      },
       "form": {
         "multiple": true,
         "required": false,
@@ -577,6 +636,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -630,6 +693,14 @@
         "multiple": false,
         "required": false,
         "types": [
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
+            "named": true
+          },
           {
             "type": "symbol",
             "named": true
@@ -730,6 +801,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -847,6 +922,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -958,6 +1037,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -1116,6 +1199,10 @@
           "named": true
         },
         {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
           "type": "set",
           "named": true
         },
@@ -1235,6 +1322,10 @@
           "named": true
         },
         {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
           "type": "set",
           "named": true
         },
@@ -1280,6 +1371,36 @@
         },
         {
           "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scoped_symbol",
+    "named": true,
+    "fields": {
+      "path": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "module_symbol",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
+          "type": "symbol",
           "named": true
         }
       ]
@@ -1351,6 +1472,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -1465,6 +1590,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -1588,6 +1717,10 @@
           "named": true
         },
         {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
           "type": "set",
           "named": true
         },
@@ -1704,6 +1837,10 @@
         },
         {
           "type": "quote",
+          "named": true
+        },
+        {
+          "type": "scoped_symbol",
           "named": true
         },
         {
@@ -1826,6 +1963,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -1943,6 +2084,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -2081,6 +2226,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -2192,6 +2341,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -2315,6 +2468,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -2426,6 +2583,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -2549,6 +2710,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -2669,6 +2834,10 @@
           "named": true
         },
         {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
           "type": "set",
           "named": true
         },
@@ -2723,10 +2892,28 @@
     "type": "var",
     "named": true,
     "fields": {
+      "doc_string": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "doc_str",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
+            "named": true
+          },
           {
             "type": "symbol",
             "named": true
@@ -2795,6 +2982,10 @@
           },
           {
             "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -2918,6 +3109,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -3032,6 +3227,10 @@
             "named": true
           },
           {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
             "type": "set",
             "named": true
           },
@@ -3096,6 +3295,10 @@
     "named": false
   },
   {
+    "type": "/",
+    "named": false
+  },
+  {
     "type": "@\"",
     "named": false
   },
@@ -3157,6 +3360,10 @@
   },
   {
     "type": "keyword",
+    "named": true
+  },
+  {
+    "type": "module_symbol",
     "named": true
   },
   {

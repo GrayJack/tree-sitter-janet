@@ -18,6 +18,25 @@ syn
   (keyword))
 
 ============================================
+Scoped symbol
+============================================
+
+a/b
+a/b/c
+
+---
+
+(source_file
+  (scoped_symbol
+    path: (module_symbol)
+    (symbol))
+  (scoped_symbol
+    path: (module_symbol)
+    (scoped_symbol
+      path: (module_symbol)
+      (symbol))))
+
+============================================
 Tuple expression
 ============================================
 
