@@ -4,14 +4,10 @@ Boolean literal
 
 true
 false
-(true)
-(false)
 
 ---
 
 (source_file
-  (bool_literal)
-  (bool_literal)
   (bool_literal)
   (bool_literal))
 
@@ -20,12 +16,10 @@ Nil literal
 ============================================
 
 nil
-(nil)
 
 ---
 
 (source_file
-  (nil_literal)
   (nil_literal))
 
 ============================================
@@ -69,7 +63,6 @@ Number literal
 String literal
 ============================================
 
-("Hello, World!")
 "Hello, World!"
 "Hello,\n World!"
 "Multi-
@@ -79,7 +72,6 @@ line"
 
 (source_file
   (str_literal)
-  (str_literal)
   (str_literal
     (escape_sequence))
   (str_literal))
@@ -88,7 +80,6 @@ line"
 Long String literal
 ============================================
 
-(``Hello, World!``)
 ``Hello, World!``
 ``Hello,\n World!``
 ``
@@ -99,7 +90,6 @@ line
 ---
 
 (source_file
-  (long_str_literal)
   (long_str_literal)
   (long_str_literal
     (escape_sequence))

@@ -1,19 +1,67 @@
+const PREC = {
+
+}
+
 module.exports = grammar({
   name: 'janet',
 
-  rules: {
-    source_file: $ => repeat($._anything),
+  extras: $ => [/\s/, ',', $.line_comment],
 
-    _anything: $ => choice(
+  rules: {
+    source_file: $ => repeat($._expr),
+
+    line_comment: $ => token(seq('#', /.*/)),
+
+    _expr: $ => choice(
       $._literals,
       $._identifier,
-      $._s_expr
+      $.array,
+      $.sqr_array,
+      $.tuple,
+      $.sqr_tuple,
+      $.struct,
+      $.table,
     ),
 
-    _s_expr: $ => seq(
-      '(',
-      $._anything,
-      ')',
+    tuple: $ => seq(
+        '(',
+        repeat(field('item', $._expr)),
+        ')'
+    ),
+
+    sqr_tuple: $ => seq(
+      '[',
+      repeat(field('item', $._expr)),
+      ']'
+    ),
+
+    array: $ => seq(
+        '@(',
+        repeat(field('item', $._expr)),
+        ')'
+    ),
+
+    sqr_array: $ => seq(
+      '@[',
+      repeat(field('item', $._expr)),
+      ']'
+    ),
+
+    struct: $ => seq(
+      '{',
+      repeat($._struct_tables_commom),
+      '}'
+    ),
+
+    table: $ => seq(
+      '@{',
+      repeat($._struct_tables_commom),
+      '}'
+    ),
+
+    _struct_tables_commom: $ => seq(
+      field('key', $._expr),
+      field('value', $._expr),
     ),
 
     _literals: $ => choice(
