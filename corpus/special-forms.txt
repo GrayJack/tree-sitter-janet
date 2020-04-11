@@ -467,20 +467,20 @@ Fn
 
 (source_file
   (fn
-    parameters: (fn_parameters))
+    parameters: (parameters))
   (fn
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (symbol)))
   (fn
     name: (symbol)
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (symbol)))
   (fn
-    parameters: (fn_parameters)
+    parameters: (parameters)
     body: (body
       form: (number_literal)
       form: (number_literal)
@@ -488,7 +488,7 @@ Fn
       form: (number_literal)
       form: (number_literal)))
   (fn
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol)
       parameter: (symbol))
     body: (body
@@ -497,7 +497,7 @@ Fn
         item: (symbol)
         item: (symbol))))
   (fn
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol)
       parameter: (symbol))
     body: (body
@@ -505,7 +505,7 @@ Fn
         item: (symbol)
         item: (symbol))))
   (fn
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol)
       parameter: (symbol)
       parameter: (symbol)

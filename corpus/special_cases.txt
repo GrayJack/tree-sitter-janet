@@ -16,7 +16,7 @@ Extra defs
 (source_file
   (extra_defs
     name: (symbol)
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -25,7 +25,7 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -38,7 +38,7 @@ Extra defs
       modifier: (keyword)
       docstring: (doc_str
         (str_literal)))
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -51,7 +51,7 @@ Extra defs
       docstring: (doc_str
         (str_literal))
       modifier: (keyword))
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -60,7 +60,7 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -69,7 +69,7 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -78,7 +78,7 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -87,7 +87,7 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    parameters: (fn_parameters
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple

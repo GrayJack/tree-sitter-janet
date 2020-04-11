@@ -171,12 +171,12 @@ module.exports = grammar({
       '(',
       'fn',
       optional(field('name', $._identifier)),
-      field('parameters', $.fn_parameters),
+      field('parameters', $.parameters),
       optional(field('body', $.body)),
       ')'
     ),
 
-    fn_parameters: $ => seq(
+    parameters: $ => seq(
       '[',
       repeat(field('parameter', $.symbol)),
       ']'
@@ -227,7 +227,7 @@ module.exports = grammar({
       choice('defn', 'defn-', 'varfn', 'varfn-', 'defmacro', 'defmacro-'),
       field('name', $._identifier),
       optional(field('metadata', $._metadata)),
-      field('parameters', $.fn_parameters),
+      field('parameters', $.parameters),
       field('body', $.body),
       ')'
     ),

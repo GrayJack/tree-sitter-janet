@@ -878,7 +878,7 @@
         "required": true,
         "types": [
           {
-            "type": "fn_parameters",
+            "type": "parameters",
             "named": true
           }
         ]
@@ -922,23 +922,7 @@
         "required": true,
         "types": [
           {
-            "type": "fn_parameters",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "fn_parameters",
-    "named": true,
-    "fields": {
-      "parameter": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "symbol",
+            "type": "parameters",
             "named": true
           }
         ]
@@ -1411,6 +1395,22 @@
     "type": "number_literal",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "parameters",
+    "named": true,
+    "fields": {
+      "parameter": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "symbol",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "quasiquote",
