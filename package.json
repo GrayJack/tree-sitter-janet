@@ -17,7 +17,7 @@
     "treesitter"
   ],
   "author": "Eric Shimizu Karbstein <gr41.j4ck@gmail.com>",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/GrayJack/tree-sitter-janet/issues"
   },

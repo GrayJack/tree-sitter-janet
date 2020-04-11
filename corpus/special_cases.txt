@@ -1,0 +1,96 @@
+============================================
+Extra defs
+============================================
+
+(defn double [x] (* x 2))
+(defn- double [x] (* x 2))
+(defn double :private "doc" [x] (* x 2))
+(defn double "doc" :private [x] (* x 2))
+(varfn double [x] (* x 2))
+(varfn- double [x] (* x 2))
+(defmacro my-macro [x] (* x 2))
+(defmacro- my-macro [x] (* x 2))
+
+---
+
+(source_file
+  (extra_defs
+    name: (symbol)
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    metadata: (metadata
+      modifier: (keyword)
+      docstring: (doc_str
+        (str_literal)))
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    metadata: (metadata
+      docstring: (doc_str
+        (str_literal))
+      modifier: (keyword))
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    parameters: (fn_parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (number_literal)))))

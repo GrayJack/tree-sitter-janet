@@ -17,6 +17,7 @@ module.exports = grammar({
       $._identifier,
       $._special_forms,
       $._shorthand,
+      $._specials,
       $.array,
       $.sqr_array,
       $.tuple,
@@ -85,10 +86,7 @@ module.exports = grammar({
       '(',
       'def',
       field('name', $._expr),
-      optional(repeat(choice(
-        field('doc_string', $.doc_str),
-        field('modifier', $.keyword),
-      ))),
+      optional($._metadata),
       field('value', $._expr),
       ')'
     ),
@@ -97,10 +95,7 @@ module.exports = grammar({
       '(',
       'var',
       field('name', $._expr),
-      optional(repeat(choice(
-        field('doc_string', $.doc_str),
-        field('modifier', $.keyword),
-      ))),
+      optional($._metadata),
       field('value', $._expr),
       ')'
     ),
@@ -176,7 +171,6 @@ module.exports = grammar({
       '(',
       'fn',
       optional(field('name', $._identifier)),
-      optional(field('doc_string', $.doc_str)),
       field('parameters', $.fn_parameters),
       optional(field('body', $.body)),
       ')'
@@ -219,6 +213,23 @@ module.exports = grammar({
     short_fn: $ => seq(
       '|',
       field('body', $._expr),
+    ),
+
+    // Specials are not part of the language per see, but having defined here
+    // is convenient for highlighters
+
+    _specials: $ => choice(
+      $.extra_defs,
+    ),
+
+    extra_defs: $ => seq(
+      '(',
+      choice('defn', 'defn-', 'varfn', 'varfn-', 'defmacro', 'defmacro-'),
+      field('name', $._identifier),
+      optional(field('metadata', $._metadata)),
+      field('parameters', $.fn_parameters),
+      field('body', $.body),
+      ')'
     ),
 
     _literals: $ => choice(
@@ -287,6 +298,11 @@ module.exports = grammar({
         )
       )
     ),
+
+    _metadata: $ => repeat1(choice(
+      field('doc_string', $.doc_str),
+      field('modifier', alias($.keyword, $.mod_keyword)),
+    )),
 
     doc_str: $ => choice($.str_literal, $.long_str_literal),
 

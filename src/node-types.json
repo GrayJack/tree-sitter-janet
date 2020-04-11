@@ -32,6 +32,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -173,6 +177,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -325,6 +333,10 @@
           "named": true
         },
         {
+          "type": "extra_defs",
+          "named": true
+        },
+        {
           "type": "fn",
           "named": true
         },
@@ -469,7 +481,7 @@
         "required": false,
         "types": [
           {
-            "type": "keyword",
+            "type": "mod_keyword",
             "named": true
           }
         ]
@@ -500,6 +512,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -638,6 +654,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -788,6 +808,84 @@
     }
   },
   {
+    "type": "extra_defs",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "body",
+            "named": true
+          }
+        ]
+      },
+      "doc_string": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "doc_str",
+            "named": true
+          }
+        ]
+      },
+      "metadata": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "doc_str",
+            "named": true
+          },
+          {
+            "type": "mod_keyword",
+            "named": true
+          }
+        ]
+      },
+      "modifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "mod_keyword",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          }
+        ]
+      },
+      "parameters": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_parameters",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "fn",
     "named": true,
     "fields": {
@@ -797,16 +895,6 @@
         "types": [
           {
             "type": "body",
-            "named": true
-          }
-        ]
-      },
-      "doc_string": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "doc_str",
             "named": true
           }
         ]
@@ -887,6 +975,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -1028,6 +1120,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -1163,6 +1259,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -1345,6 +1445,10 @@
           "named": true
         },
         {
+          "type": "extra_defs",
+          "named": true
+        },
+        {
           "type": "fn",
           "named": true
         },
@@ -1485,6 +1589,10 @@
         },
         {
           "type": "do",
+          "named": true
+        },
+        {
+          "type": "extra_defs",
           "named": true
         },
         {
@@ -1661,6 +1769,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -1796,6 +1908,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -1943,6 +2059,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -2084,6 +2204,10 @@
         },
         {
           "type": "do",
+          "named": true
+        },
+        {
+          "type": "extra_defs",
           "named": true
         },
         {
@@ -2230,6 +2354,10 @@
           "named": true
         },
         {
+          "type": "extra_defs",
+          "named": true
+        },
+        {
           "type": "fn",
           "named": true
         },
@@ -2370,6 +2498,10 @@
         },
         {
           "type": "do",
+          "named": true
+        },
+        {
+          "type": "extra_defs",
           "named": true
         },
         {
@@ -2516,6 +2648,10 @@
           "named": true
         },
         {
+          "type": "extra_defs",
+          "named": true
+        },
+        {
           "type": "fn",
           "named": true
         },
@@ -2656,6 +2792,10 @@
         },
         {
           "type": "do",
+          "named": true
+        },
+        {
+          "type": "extra_defs",
           "named": true
         },
         {
@@ -2802,6 +2942,10 @@
           "named": true
         },
         {
+          "type": "extra_defs",
+          "named": true
+        },
+        {
           "type": "fn",
           "named": true
         },
@@ -2942,6 +3086,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -3086,6 +3234,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -3248,6 +3400,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -3383,6 +3539,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -3530,6 +3690,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -3665,6 +3829,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -3812,6 +3980,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -3956,6 +4128,10 @@
           "named": true
         },
         {
+          "type": "extra_defs",
+          "named": true
+        },
+        {
           "type": "fn",
           "named": true
         },
@@ -4085,7 +4261,7 @@
         "required": false,
         "types": [
           {
-            "type": "keyword",
+            "type": "mod_keyword",
             "named": true
           }
         ]
@@ -4116,6 +4292,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -4254,6 +4434,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -4401,6 +4585,10 @@
             "named": true
           },
           {
+            "type": "extra_defs",
+            "named": true
+          },
+          {
             "type": "fn",
             "named": true
           },
@@ -4536,6 +4724,10 @@
           },
           {
             "type": "do",
+            "named": true
+          },
+          {
+            "type": "extra_defs",
             "named": true
           },
           {
@@ -4719,6 +4911,22 @@
     "named": false
   },
   {
+    "type": "defmacro",
+    "named": false
+  },
+  {
+    "type": "defmacro-",
+    "named": false
+  },
+  {
+    "type": "defn",
+    "named": false
+  },
+  {
+    "type": "defn-",
+    "named": false
+  },
+  {
     "type": "do",
     "named": false
   },
@@ -4740,6 +4948,10 @@
   },
   {
     "type": "keyword",
+    "named": true
+  },
+  {
+    "type": "mod_keyword",
     "named": true
   },
   {
@@ -4780,6 +4992,14 @@
   },
   {
     "type": "var",
+    "named": false
+  },
+  {
+    "type": "varfn",
+    "named": false
+  },
+  {
+    "type": "varfn-",
     "named": false
   },
   {

@@ -13,6 +13,7 @@ Def
 
 (def mydef :private 3)
 (def mydef2 :private "A docstring" 4)
+(def mydef3 "doc" "value")
 
 ---
 
@@ -73,14 +74,20 @@ Def
           item: (number_literal)))))
   (def
     name: (symbol)
-    modifier: (keyword)
+    modifier: (mod_keyword)
     value: (number_literal))
   (def
     name: (symbol)
-    modifier: (keyword)
+    modifier: (mod_keyword)
     doc_string: (doc_str
       (str_literal))
-    value: (number_literal)))
+    value: (number_literal))
+  (def
+    name: (symbol)
+    doc_string: (doc_str
+      (str_literal))
+    value: (str_literal)))
+
 
 ============================================
 Var
@@ -97,6 +104,7 @@ Var
 
 (var myvar :private 3)
 (var myvar2 :private "A docstring" 4)
+(var mydef3 "doc" "value")
 
 ---
 
@@ -157,14 +165,20 @@ Var
           item: (number_literal)))))
   (var
     name: (symbol)
-    modifier: (keyword)
+    modifier: (mod_keyword)
     value: (number_literal))
   (var
     name: (symbol)
-    modifier: (keyword)
+    modifier: (mod_keyword)
     doc_string: (doc_str
       (str_literal))
-    value: (number_literal)))
+    value: (number_literal))
+  (var
+    name: (symbol)
+    doc_string: (doc_str
+      (str_literal))
+    value: (str_literal)))
+
 
 ============================================
 Quote
