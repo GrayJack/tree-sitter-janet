@@ -76,6 +76,170 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "body",
+    "named": true,
+    "fields": {
+      "form": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -205,6 +369,26 @@
           "named": true
         },
         {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
           "type": "splice",
           "named": true
         },
@@ -271,11 +455,21 @@
     "named": true,
     "fields": {
       "doc_string": {
-        "multiple": false,
+        "multiple": true,
         "required": false,
         "types": [
           {
             "type": "doc_str",
+            "named": true
+          }
+        ]
+      },
+      "modifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "keyword",
             "named": true
           }
         ]
@@ -285,7 +479,63 @@
         "required": true,
         "types": [
           {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
             "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
             "named": true
           },
           {
@@ -293,7 +543,71 @@
             "named": true
           },
           {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
             "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -371,6 +685,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -422,120 +756,12 @@
     "type": "do",
     "named": true,
     "fields": {
-      "form": {
-        "multiple": true,
+      "body": {
+        "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "bool_literal",
-            "named": true
-          },
-          {
-            "type": "break",
-            "named": true
-          },
-          {
-            "type": "buffer_literal",
-            "named": true
-          },
-          {
-            "type": "def",
-            "named": true
-          },
-          {
-            "type": "do",
-            "named": true
-          },
-          {
-            "type": "fn",
-            "named": true
-          },
-          {
-            "type": "if",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "long_buffer_literal",
-            "named": true
-          },
-          {
-            "type": "long_str_literal",
-            "named": true
-          },
-          {
-            "type": "nil_literal",
-            "named": true
-          },
-          {
-            "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "quasiquote",
-            "named": true
-          },
-          {
-            "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
-            "type": "set",
-            "named": true
-          },
-          {
-            "type": "splice",
-            "named": true
-          },
-          {
-            "type": "sqr_array",
-            "named": true
-          },
-          {
-            "type": "sqr_tuple",
-            "named": true
-          },
-          {
-            "type": "str_literal",
-            "named": true
-          },
-          {
-            "type": "struct",
-            "named": true
-          },
-          {
-            "type": "symbol",
-            "named": true
-          },
-          {
-            "type": "table",
-            "named": true
-          },
-          {
-            "type": "tuple",
-            "named": true
-          },
-          {
-            "type": "unquote",
-            "named": true
-          },
-          {
-            "type": "var",
-            "named": true
-          },
-          {
-            "type": "while",
+            "type": "body",
             "named": true
           }
         ]
@@ -547,11 +773,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
-          "type": "escape_sequence",
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "str_literal",
           "named": true
         }
       ]
@@ -561,130 +791,22 @@
     "type": "fn",
     "named": true,
     "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "body",
+            "named": true
+          }
+        ]
+      },
       "doc_string": {
         "multiple": false,
         "required": false,
         "types": [
           {
             "type": "doc_str",
-            "named": true
-          }
-        ]
-      },
-      "form": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "bool_literal",
-            "named": true
-          },
-          {
-            "type": "break",
-            "named": true
-          },
-          {
-            "type": "buffer_literal",
-            "named": true
-          },
-          {
-            "type": "def",
-            "named": true
-          },
-          {
-            "type": "do",
-            "named": true
-          },
-          {
-            "type": "fn",
-            "named": true
-          },
-          {
-            "type": "if",
-            "named": true
-          },
-          {
-            "type": "keyword",
-            "named": true
-          },
-          {
-            "type": "long_buffer_literal",
-            "named": true
-          },
-          {
-            "type": "long_str_literal",
-            "named": true
-          },
-          {
-            "type": "nil_literal",
-            "named": true
-          },
-          {
-            "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "quasiquote",
-            "named": true
-          },
-          {
-            "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
-            "type": "set",
-            "named": true
-          },
-          {
-            "type": "splice",
-            "named": true
-          },
-          {
-            "type": "sqr_array",
-            "named": true
-          },
-          {
-            "type": "sqr_tuple",
-            "named": true
-          },
-          {
-            "type": "str_literal",
-            "named": true
-          },
-          {
-            "type": "struct",
-            "named": true
-          },
-          {
-            "type": "symbol",
-            "named": true
-          },
-          {
-            "type": "table",
-            "named": true
-          },
-          {
-            "type": "tuple",
-            "named": true
-          },
-          {
-            "type": "unquote",
-            "named": true
-          },
-          {
-            "type": "var",
-            "named": true
-          },
-          {
-            "type": "while",
             "named": true
           }
         ]
@@ -812,6 +934,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -930,6 +1072,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -1045,6 +1207,26 @@
           },
           {
             "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
             "named": true
           },
           {
@@ -1207,6 +1389,26 @@
           "named": true
         },
         {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
           "type": "splice",
           "named": true
         },
@@ -1327,6 +1529,26 @@
         },
         {
           "type": "set",
+          "named": true
+        },
+        {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
           "named": true
         },
         {
@@ -1483,6 +1705,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -1601,6 +1843,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -1646,6 +1908,722 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "short_fn",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
+            "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
+            "named": true
+          },
+          {
+            "type": "scoped_symbol",
+            "named": true
+          },
+          {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "short_quasiquote",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "short_quote",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "short_splice",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "short_unquote",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break",
+          "named": true
+        },
+        {
+          "type": "buffer_literal",
+          "named": true
+        },
+        {
+          "type": "def",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "fn",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "long_buffer_literal",
+          "named": true
+        },
+        {
+          "type": "long_str_literal",
+          "named": true
+        },
+        {
+          "type": "nil_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "quasiquote",
+          "named": true
+        },
+        {
+          "type": "quote",
+          "named": true
+        },
+        {
+          "type": "scoped_symbol",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
+          "type": "splice",
+          "named": true
+        },
+        {
+          "type": "sqr_array",
+          "named": true
+        },
+        {
+          "type": "sqr_tuple",
+          "named": true
+        },
+        {
+          "type": "str_literal",
+          "named": true
+        },
+        {
+          "type": "struct",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "tuple",
+          "named": true
+        },
+        {
+          "type": "unquote",
+          "named": true
+        },
+        {
+          "type": "var",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1722,6 +2700,26 @@
         },
         {
           "type": "set",
+          "named": true
+        },
+        {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
           "named": true
         },
         {
@@ -1848,6 +2846,26 @@
           "named": true
         },
         {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
           "type": "splice",
           "named": true
         },
@@ -1968,6 +2986,26 @@
           },
           {
             "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
             "named": true
           },
           {
@@ -2092,6 +3130,26 @@
           },
           {
             "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
             "named": true
           },
           {
@@ -2234,6 +3292,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -2349,6 +3427,26 @@
           },
           {
             "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
             "named": true
           },
           {
@@ -2476,6 +3574,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -2591,6 +3709,26 @@
           },
           {
             "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
             "named": true
           },
           {
@@ -2718,6 +3856,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -2842,6 +4000,26 @@
           "named": true
         },
         {
+          "type": "short_fn",
+          "named": true
+        },
+        {
+          "type": "short_quasiquote",
+          "named": true
+        },
+        {
+          "type": "short_quote",
+          "named": true
+        },
+        {
+          "type": "short_splice",
+          "named": true
+        },
+        {
+          "type": "short_unquote",
+          "named": true
+        },
+        {
           "type": "splice",
           "named": true
         },
@@ -2893,11 +4071,21 @@
     "named": true,
     "fields": {
       "doc_string": {
-        "multiple": false,
+        "multiple": true,
         "required": false,
         "types": [
           {
             "type": "doc_str",
+            "named": true
+          }
+        ]
+      },
+      "modifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "keyword",
             "named": true
           }
         ]
@@ -2907,7 +4095,63 @@
         "required": true,
         "types": [
           {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "break",
+            "named": true
+          },
+          {
+            "type": "buffer_literal",
+            "named": true
+          },
+          {
+            "type": "def",
+            "named": true
+          },
+          {
+            "type": "do",
+            "named": true
+          },
+          {
+            "type": "fn",
+            "named": true
+          },
+          {
+            "type": "if",
+            "named": true
+          },
+          {
             "type": "keyword",
+            "named": true
+          },
+          {
+            "type": "long_buffer_literal",
+            "named": true
+          },
+          {
+            "type": "long_str_literal",
+            "named": true
+          },
+          {
+            "type": "nil_literal",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "quasiquote",
+            "named": true
+          },
+          {
+            "type": "quote",
             "named": true
           },
           {
@@ -2915,7 +4159,71 @@
             "named": true
           },
           {
+            "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
+            "type": "splice",
+            "named": true
+          },
+          {
+            "type": "sqr_array",
+            "named": true
+          },
+          {
+            "type": "sqr_tuple",
+            "named": true
+          },
+          {
+            "type": "str_literal",
+            "named": true
+          },
+          {
+            "type": "struct",
+            "named": true
+          },
+          {
             "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "tuple",
+            "named": true
+          },
+          {
+            "type": "unquote",
+            "named": true
+          },
+          {
+            "type": "var",
+            "named": true
+          },
+          {
+            "type": "while",
             "named": true
           }
         ]
@@ -2990,6 +4298,26 @@
           },
           {
             "type": "set",
+            "named": true
+          },
+          {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
             "named": true
           },
           {
@@ -3117,6 +4445,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -3235,6 +4583,26 @@
             "named": true
           },
           {
+            "type": "short_fn",
+            "named": true
+          },
+          {
+            "type": "short_quasiquote",
+            "named": true
+          },
+          {
+            "type": "short_quote",
+            "named": true
+          },
+          {
+            "type": "short_splice",
+            "named": true
+          },
+          {
+            "type": "short_unquote",
+            "named": true
+          },
+          {
             "type": "splice",
             "named": true
           },
@@ -3287,6 +4655,10 @@
     "named": false
   },
   {
+    "type": "'",
+    "named": false
+  },
+  {
     "type": "(",
     "named": false
   },
@@ -3295,7 +4667,15 @@
     "named": false
   },
   {
+    "type": ",",
+    "named": false
+  },
+  {
     "type": "/",
+    "named": false
+  },
+  {
+    "type": ";",
     "named": false
   },
   {
@@ -3411,7 +4791,15 @@
     "named": false
   },
   {
+    "type": "|",
+    "named": false
+  },
+  {
     "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]

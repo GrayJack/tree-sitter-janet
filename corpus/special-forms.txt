@@ -7,6 +7,13 @@ Def
 (def c (1 2 3))
 (def a (+ 1 2 (* 3 4)))
 
+(def [a b c] (range 10))
+(def {:x x} @{:x (+ 1 2)})
+(def [y {:x x}] @[:hi @{:x (+ 1 2)}])
+
+(def mydef :private 3)
+(def mydef2 :private "A docstring" 4)
+
 ---
 
 (source_file
@@ -31,7 +38,49 @@ Def
       item: (tuple
         item: (symbol)
         item: (number_literal)
-        item: (number_literal)))))
+        item: (number_literal))))
+  (def
+    name: (sqr_tuple
+      item: (symbol)
+      item: (symbol)
+      item: (symbol))
+    value: (tuple
+      item: (symbol)
+      item: (number_literal)))
+  (def
+    name: (struct
+      key: (keyword)
+      value: (symbol))
+    value: (table
+      key: (keyword)
+      value: (tuple
+        item: (symbol)
+        item: (number_literal)
+        item: (number_literal))))
+  (def
+    name: (sqr_tuple
+      item: (symbol)
+      item: (struct
+        key: (keyword)
+        value: (symbol)))
+    value: (sqr_array
+      item: (keyword)
+      item: (table
+        key: (keyword)
+        value: (tuple
+          item: (symbol)
+          item: (number_literal)
+          item: (number_literal)))))
+  (def
+    name: (symbol)
+    modifier: (keyword)
+    value: (number_literal))
+  (def
+    name: (symbol)
+    modifier: (keyword)
+    doc_string: (doc_str
+      (str_literal))
+    value: (number_literal)))
 
 ============================================
 Var
@@ -42,6 +91,13 @@ Var
 (var c (1 2 3))
 (var a (+ 1 2 (* 3 4)))
 
+(var [a b c] (range 10))
+(var {:x x} @{:x (+ 1 2)})
+(var [y {:x x}] @[:hi @{:x (+ 1 2)}])
+
+(var myvar :private 3)
+(var myvar2 :private "A docstring" 4)
+
 ---
 
 (source_file
@@ -66,7 +122,49 @@ Var
       item: (tuple
         item: (symbol)
         item: (number_literal)
-        item: (number_literal)))))
+        item: (number_literal))))
+  (var
+    name: (sqr_tuple
+      item: (symbol)
+      item: (symbol)
+      item: (symbol))
+    value: (tuple
+      item: (symbol)
+      item: (number_literal)))
+  (var
+    name: (struct
+      key: (keyword)
+      value: (symbol))
+    value: (table
+      key: (keyword)
+      value: (tuple
+        item: (symbol)
+        item: (number_literal)
+        item: (number_literal))))
+  (var
+    name: (sqr_tuple
+      item: (symbol)
+      item: (struct
+        key: (keyword)
+        value: (symbol)))
+    value: (sqr_array
+      item: (keyword)
+      item: (table
+        key: (keyword)
+        value: (tuple
+          item: (symbol)
+          item: (number_literal)
+          item: (number_literal)))))
+  (var
+    name: (symbol)
+    modifier: (keyword)
+    value: (number_literal))
+  (var
+    name: (symbol)
+    modifier: (keyword)
+    doc_string: (doc_str
+      (str_literal))
+    value: (number_literal)))
 
 ============================================
 Quote
@@ -291,27 +389,30 @@ Do
 
 (source_file
   (do
-    form: (number_literal)
-    form: (number_literal)
-    form: (number_literal)
-    form: (number_literal))
+    body: (body
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)))
   (do
-    form: (tuple
-      item: (symbol)
-      item: (number_literal))
-    form: (tuple
-      item: (symbol)
-      item: (number_literal))
-    form: (tuple
-      item: (symbol)
-      item: (number_literal)))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (number_literal))
+      form: (tuple
+        item: (symbol)
+        item: (number_literal))
+      form: (tuple
+        item: (symbol)
+        item: (number_literal))))
   (do
-    form: (def
-      name: (symbol)
-      value: (number_literal))
-    form: (tuple
-      item: (symbol)
-      item: (symbol))))
+    body: (body
+      form: (def
+        name: (symbol)
+        value: (number_literal))
+      form: (tuple
+        item: (symbol)
+        item: (symbol)))))
 
 ============================================
 While
@@ -356,34 +457,39 @@ Fn
   (fn
     parameters: (fn_parameters
       parameter: (symbol))
-    form: (symbol))
+    body: (body
+      form: (symbol)))
   (fn
     name: (symbol)
     parameters: (fn_parameters
       parameter: (symbol))
-    form: (symbol))
+    body: (body
+      form: (symbol)))
   (fn
     parameters: (fn_parameters)
-    form: (number_literal)
-    form: (number_literal)
-    form: (number_literal)
-    form: (number_literal)
-    form: (number_literal))
+    body: (body
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)))
   (fn
     parameters: (fn_parameters
       parameter: (symbol)
       parameter: (symbol))
-    form: (tuple
-      item: (symbol)
-      item: (symbol)
-      item: (symbol)))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (symbol))))
   (fn
     parameters: (fn_parameters
       parameter: (symbol)
       parameter: (symbol))
-    form: (tuple
-      item: (symbol)
-      item: (symbol)))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol))))
   (fn
     parameters: (fn_parameters
       parameter: (symbol)
@@ -391,13 +497,14 @@ Fn
       parameter: (symbol)
       parameter: (symbol)
       parameter: (symbol))
-    form: (tuple
-      item: (symbol)
-      item: (symbol)
-      item: (symbol)
-      item: (symbol)
-      item: (symbol)
-      item: (symbol)
-      item: (symbol)
-      item: (symbol)
-      item: (symbol))))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)))))

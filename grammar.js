@@ -5,7 +5,7 @@ const PREC = {
 module.exports = grammar({
   name: 'janet',
 
-  extras: $ => [/\s/, ',', $.line_comment],
+  extras: $ => [/\s/, $.line_comment],
 
   rules: {
     source_file: $ => repeat($._expr),
@@ -16,7 +16,7 @@ module.exports = grammar({
       $._literals,
       $._identifier,
       $._special_forms,
-      // $._shorthand,
+      $._shorthand,
       $.array,
       $.sqr_array,
       $.tuple,
@@ -84,8 +84,11 @@ module.exports = grammar({
     def: $ => seq(
       '(',
       'def',
-      field('name', $._identifier),
-      optional(field('doc_string', $.doc_str)),
+      field('name', $._expr),
+      optional(repeat(choice(
+        field('doc_string', $.doc_str),
+        field('modifier', $.keyword),
+      ))),
       field('value', $._expr),
       ')'
     ),
@@ -93,8 +96,11 @@ module.exports = grammar({
     var: $ => seq(
       '(',
       'var',
-      field('name', $._identifier),
-      optional(field('doc_string', $.doc_str)),
+      field('name', $._expr),
+      optional(repeat(choice(
+        field('doc_string', $.doc_str),
+        field('modifier', $.keyword),
+      ))),
       field('value', $._expr),
       ')'
     ),
@@ -154,7 +160,7 @@ module.exports = grammar({
     do: $ => seq(
       '(',
       'do',
-      repeat(field('form', $._expr)),
+      optional(field('body', $.body)),
       ')'
     ),
 
@@ -172,7 +178,7 @@ module.exports = grammar({
       optional(field('name', $._identifier)),
       optional(field('doc_string', $.doc_str)),
       field('parameters', $.fn_parameters),
-      repeat(field('form', $._expr)),
+      optional(field('body', $.body)),
       ')'
     ),
 
@@ -180,6 +186,39 @@ module.exports = grammar({
       '[',
       repeat(field('parameter', $.symbol)),
       ']'
+    ),
+
+    _shorthand: $ => choice(
+      $.short_quote,
+      $.short_splice,
+      $.short_quasiquote,
+      $.short_unquote,
+      $.short_fn,
+    ),
+
+    short_quote: $ => seq(
+      '\'',
+      $._expr,
+    ),
+
+    short_splice: $ => seq(
+      ';',
+      $._expr,
+    ),
+
+    short_quasiquote: $ => seq(
+      '~',
+      $._expr,
+    ),
+
+    short_unquote: $ => seq(
+      ',',
+      $._expr,
+    ),
+
+    short_fn: $ => seq(
+      '|',
+      field('body', $._expr),
     ),
 
     _literals: $ => choice(
@@ -251,6 +290,8 @@ module.exports = grammar({
 
     doc_str: $ => choice($.str_literal, $.long_str_literal),
 
+    body: $ => repeat1(field('form', $._expr)),
+
     // identifier
     _identifier: $ => choice($.symbol, $.keyword, $.scoped_symbol),
 
@@ -261,6 +302,6 @@ module.exports = grammar({
     ),
 
     keyword: $ => /:[a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
-    symbol: $ => /[a-zA-Zα-ωΑ-Ωµ!@$%^&*_+=|~<>.?\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
+    symbol: $ => /[a-zA-Zα-ωΑ-Ωµ!@$%^&*_+=<>.?\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
   }
 });
