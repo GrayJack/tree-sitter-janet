@@ -36,6 +36,8 @@ bool tree_sitter_janet_external_scanner_scan(
 ) {
     while (iswspace(lexer->lookahead)) lexer->advance(lexer, true);
 
+    // This was based on other person implementation of tree-sitter-janet:
+    //    https://github.com/sogaiu/tree-sitter-janet/blob/master/src/scanner.cc
     if (valid_symbols[_LONG_STR] || valid_symbols[_LONG_BUFFER]) {
         if (lexer->lookahead == '@') {
             lexer->result_symbol = _LONG_BUFFER;
