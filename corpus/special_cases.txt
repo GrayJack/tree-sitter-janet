@@ -34,10 +34,9 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    metadata: (metadata
-      modifier: (keyword)
-      docstring: (doc_str
-        (str_literal)))
+    modifier: (mod_keyword)
+    doc_string: (doc_str
+      (str_literal))
     parameters: (parameters
       parameter: (symbol))
     body: (body
@@ -47,10 +46,9 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    metadata: (metadata
-      docstring: (doc_str
-        (str_literal))
-      modifier: (keyword))
+    doc_string: (doc_str
+      (str_literal))
+    modifier: (mod_keyword)
     parameters: (parameters
       parameter: (symbol))
     body: (body

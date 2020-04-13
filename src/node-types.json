@@ -1364,32 +1364,12 @@
   {
     "type": "long_buffer_literal",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_sequence",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "long_str_literal",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_sequence",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "number_literal",
@@ -4883,10 +4863,6 @@
     "named": false
   },
   {
-    "type": "@``",
-    "named": false
-  },
-  {
     "type": "@{",
     "named": false
   },
@@ -4896,10 +4872,6 @@
   },
   {
     "type": "]",
-    "named": false
-  },
-  {
-    "type": "``",
     "named": false
   },
   {

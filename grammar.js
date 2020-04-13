@@ -5,6 +5,8 @@ const PREC = {
 module.exports = grammar({
   name: 'janet',
 
+  externals: $ => [$._long_str, $._long_buffer],
+
   extras: $ => [/\s/, $.line_comment],
 
   rules: {
@@ -251,14 +253,7 @@ module.exports = grammar({
       '"'
     ),
 
-    long_str_literal: $ => seq(
-      '``',
-      repeat(choice(
-        /[^`\\]+/,
-        $.escape_sequence,
-      )),
-      '``'
-    ),
+    long_str_literal: $ => $._long_str,
 
     buffer_literal: $ => seq(
       '@"',
@@ -269,14 +264,7 @@ module.exports = grammar({
       '"'
     ),
 
-    long_buffer_literal: $ => seq(
-      '@``',
-      repeat(choice(
-        /[^`\\]+/,
-        $.escape_sequence,
-      )),
-      '``'
-    ),
+    long_buffer_literal: $ => $._long_buffer,
 
     number_literal: $ => choice(
       /[-+]?(\d[_\d]*|\d[_\d]*\.[_\d]*|\.[_\d]+)([eE&][+-]?[\d]+)?/,

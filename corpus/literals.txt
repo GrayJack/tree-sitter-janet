@@ -80,19 +80,20 @@ line"
 Long String literal
 ============================================
 
+`Hello, World!`
 ``Hello, World!``
-``Hello,\n World!``
-``
+```Hello,\n World!```
+```
 Multi-
 line
-``
+```
 
 ---
 
 (source_file
   (long_str_literal)
-  (long_str_literal
-    (escape_sequence))
+  (long_str_literal)
+  (long_str_literal)
   (long_str_literal))
 
 ============================================
@@ -101,11 +102,29 @@ Buffer literal
 
 @""
 @"Buffer."
-@``Another buffer``
 
 ---
 
 (source_file
   (buffer_literal)
-  (buffer_literal)
+  (buffer_literal))
+
+============================================
+Long Buffer literal
+============================================
+
+@`Hello, World!`
+@``Hello, World!``
+@```Hello,\n World!```
+@```
+Multi-
+line
+```
+
+---
+
+(source_file
+  (long_buffer_literal)
+  (long_buffer_literal)
+  (long_buffer_literal)
   (long_buffer_literal))
