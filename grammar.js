@@ -88,7 +88,7 @@ module.exports = grammar({
       '(',
       'def',
       field('name', $._expr),
-      optional($._metadata),
+      repeat(field('metadata', $.metadata)),
       field('value', $._expr),
       ')'
     ),
@@ -97,7 +97,7 @@ module.exports = grammar({
       '(',
       'var',
       field('name', $._expr),
-      optional($._metadata),
+      repeat(field('metadata', $.metadata)),
       field('value', $._expr),
       ')'
     ),
@@ -227,8 +227,8 @@ module.exports = grammar({
     extra_defs: $ => seq(
       '(',
       choice('defn', 'defn-', 'varfn', 'varfn-', 'defmacro', 'defmacro-'),
-      field('name', $._identifier),
-      optional(field('metadata', $._metadata)),
+      field('name', $._name),
+      repeat(field('metadata', $.metadata)),
       field('parameters', $.parameters),
       field('body', $.body),
       ')'
@@ -287,10 +287,18 @@ module.exports = grammar({
       )
     ),
 
-    _metadata: $ => repeat1(choice(
-      field('doc_string', $.doc_str),
-      field('modifier', alias($.keyword, $.mod_keyword)),
+    // EXTRA HELPERS
+
+    metadata: $ => prec.left(choice(
+      $.keyword, $.str_literal, $.long_str_literal,
+      $.quote, $.splice, $.quasiquote, $.unquote,
+      $.short_quote, $.short_splice, $.short_quasiquote, $.short_unquote,
     )),
+
+    _name: $ => choice(
+      $._identifier, $.quote, $.splice, $.quasiquote, $.unquote,
+      $.short_quote, $.short_splice, $.short_quasiquote, $.short_unquote,
+    ),
 
     doc_str: $ => choice($.str_literal, $.long_str_literal),
 
@@ -300,7 +308,10 @@ module.exports = grammar({
     _identifier: $ => choice($.symbol, $.keyword, $.scoped_symbol),
 
     scoped_symbol: $ => seq(
-      field('path', alias($.symbol, $.module_symbol)),
+      field('path', choice(
+        alias($.symbol, $.module_symbol),
+        alias($.keyword, $.module_keyword),
+      )),
       '/',
       choice($.scoped_symbol, $.symbol),
     ),

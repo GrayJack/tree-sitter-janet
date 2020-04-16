@@ -10,6 +10,7 @@ Extra defs
 (varfn- double [x] (* x 2))
 (defmacro my-macro [x] (* x 2))
 (defmacro- my-macro [x] (* x 2))
+(defn 'name ;'mods [pars] 'args)
 
 ---
 
@@ -34,8 +35,9 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    modifier: (mod_keyword)
-    doc_string: (doc_str
+    metadata: (metadata
+      (keyword))
+    metadata: (metadata
       (str_literal))
     parameters: (parameters
       parameter: (symbol))
@@ -46,9 +48,10 @@ Extra defs
         item: (number_literal))))
   (extra_defs
     name: (symbol)
-    doc_string: (doc_str
+    metadata: (metadata
       (str_literal))
-    modifier: (mod_keyword)
+    metadata: (metadata
+      (keyword))
     parameters: (parameters
       parameter: (symbol))
     body: (body
@@ -91,4 +94,16 @@ Extra defs
       form: (tuple
         item: (symbol)
         item: (symbol)
-        item: (number_literal)))))
+        item: (number_literal))))
+  (extra_defs
+    name: (short_quote
+      (symbol))
+    metadata: (metadata
+      (short_splice
+        (short_quote
+          (symbol))))
+    parameters: (parameters
+      parameter: (symbol))
+    body: (body
+      form: (short_quote
+        (symbol)))))

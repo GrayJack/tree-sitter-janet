@@ -15,6 +15,16 @@ Def
 (def mydef2 :private "A docstring" 4)
 (def mydef3 "doc" "value")
 
+# test possible edge cases
+(def a :key)
+(def a "str")
+(def a `str`)
+
+# With metadata
+(def 'a 'meta 'value)
+(def a :key :hidden 10)
+(def ,name ,;modifiers (fun ,name ,;(tuple/slice more start)))
+
 ---
 
 (source_file
@@ -74,19 +84,67 @@ Def
           item: (number_literal)))))
   (def
     name: (symbol)
-    modifier: (mod_keyword)
+    metadata: (metadata
+      (keyword))
     value: (number_literal))
   (def
     name: (symbol)
-    modifier: (mod_keyword)
-    doc_string: (doc_str
+    metadata: (metadata
+      (keyword))
+    metadata: (metadata
       (str_literal))
     value: (number_literal))
   (def
     name: (symbol)
-    doc_string: (doc_str
+    metadata: (metadata
       (str_literal))
-    value: (str_literal)))
+    value: (str_literal))
+  (line_comment)
+  (def
+    name: (symbol)
+    value: (keyword))
+  (def
+    name: (symbol)
+    value: (str_literal))
+  (def
+    name: (symbol)
+    value: (long_str_literal))
+  (line_comment)
+  (def
+    name: (short_quote
+      (symbol))
+    metadata: (metadata
+      (short_quote
+        (symbol)))
+    value: (short_quote
+      (symbol)))
+  (def
+    name: (symbol)
+    metadata: (metadata
+      (keyword))
+    metadata: (metadata
+      (keyword))
+    value: (number_literal))
+  (def
+    name: (short_unquote
+      (symbol))
+    metadata: (metadata
+      (short_unquote
+        (short_splice
+          (symbol))))
+    value: (tuple
+      item: (symbol)
+      item: (short_unquote
+        (symbol))
+      item: (short_unquote
+        (short_splice
+          (tuple
+            item: (scoped_symbol
+              path: (module_symbol)
+              (symbol))
+            item: (symbol)
+            item: (symbol)))))))
+
 
 
 ============================================
@@ -104,7 +162,18 @@ Var
 
 (var myvar :private 3)
 (var myvar2 :private "A docstring" 4)
-(var mydef3 "doc" "value")
+(var myvar3 "doc" "value")
+
+# test possible edge cases
+(var a :key)
+(var a "str")
+(var a `str`)
+
+# With metadata
+(var 'a 'meta 'value)
+(var a :key :hidden 10)
+(var ,name ,;modifiers (fun ,name ,;(tuple/slice more start)))
+
 
 ---
 
@@ -165,19 +234,66 @@ Var
           item: (number_literal)))))
   (var
     name: (symbol)
-    modifier: (mod_keyword)
+    metadata: (metadata
+      (keyword))
     value: (number_literal))
   (var
     name: (symbol)
-    modifier: (mod_keyword)
-    doc_string: (doc_str
+    metadata: (metadata
+      (keyword))
+    metadata: (metadata
       (str_literal))
     value: (number_literal))
   (var
     name: (symbol)
-    doc_string: (doc_str
+    metadata: (metadata
       (str_literal))
-    value: (str_literal)))
+    value: (str_literal))
+  (line_comment)
+  (var
+    name: (symbol)
+    value: (keyword))
+  (var
+    name: (symbol)
+    value: (str_literal))
+  (var
+    name: (symbol)
+    value: (long_str_literal))
+  (line_comment)
+  (var
+    name: (short_quote
+      (symbol))
+    metadata: (metadata
+      (short_quote
+        (symbol)))
+    value: (short_quote
+      (symbol)))
+  (var
+    name: (symbol)
+    metadata: (metadata
+      (keyword))
+    metadata: (metadata
+      (keyword))
+    value: (number_literal))
+  (var
+    name: (short_unquote
+      (symbol))
+    metadata: (metadata
+      (short_unquote
+        (short_splice
+          (symbol))))
+    value: (tuple
+      item: (symbol)
+      item: (short_unquote
+        (symbol))
+      item: (short_unquote
+        (short_splice
+          (tuple
+            item: (scoped_symbol
+              path: (module_symbol)
+              (symbol))
+            item: (symbol)
+            item: (symbol)))))))
 
 
 ============================================
