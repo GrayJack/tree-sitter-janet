@@ -2,6 +2,7 @@
 Extra defs
 ============================================
 
+(defmacro macro [a])
 (defn double [x] (* x 2))
 (defn- double [x] (* x 2))
 (defn double :private "doc" [x] (* x 2))
@@ -10,7 +11,9 @@ Extra defs
 (varfn- double [x] (* x 2))
 (defmacro my-macro [x] (* x 2))
 (defmacro- my-macro [x] (* x 2))
+(defn func [a [b c]] (* a b c))
 (defn 'name ;'mods [pars] 'args)
+(defn 'name ;'mods 'par 'args)
 
 ---
 
@@ -18,6 +21,10 @@ Extra defs
   (extra_defs
     name: (symbol)
     parameters: (parameters
+      parameter: (symbol)))
+  (extra_defs
+    name: (symbol)
+    parameters: (parameters
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -95,6 +102,19 @@ Extra defs
         item: (symbol)
         item: (symbol)
         item: (number_literal))))
+  (extra_defs
+    name: (symbol)
+    parameters: (parameters
+      parameter: (symbol)
+      parameter: (sqr_tuple
+        item: (symbol)
+        item: (symbol)))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol))))
   (extra_defs
     name: (short_quote
       (symbol))
@@ -106,4 +126,16 @@ Extra defs
       parameter: (symbol))
     body: (body
       form: (short_quote
-        (symbol)))))
+        (symbol))))
+  (extra_defs
+    name: (short_quote
+      (symbol))
+    metadata: (metadata
+      (short_splice
+        (short_quote
+          (symbol))))
+    metadata: (metadata
+      (short_quote
+        (symbol)))
+    parameters: (short_quote
+      (symbol))))

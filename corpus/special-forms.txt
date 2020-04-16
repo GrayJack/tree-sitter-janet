@@ -578,6 +578,13 @@ Fn
 (fn [x y] (+ x y))
 (fn [& args] (length args))
 (fn [w x y z &] (tuple w w x x y y z z))
+(fn [[a b] [c d]] (* a b c d))
+(fn with-name [x] (* 2 x))
+(fn 'name [c] 'body)
+(fn 'namae 'param 'body)
+# known limitation `'param` as name and `'body` as parameter
+# For highlight, not a big deal
+(fn 'param 'body)
 
 ---
 
@@ -637,4 +644,51 @@ Fn
         item: (symbol)
         item: (symbol)
         item: (symbol)
-        item: (symbol)))))
+        item: (symbol))))
+  (fn
+    parameters: (parameters
+      parameter: (sqr_tuple
+        item: (symbol)
+        item: (symbol))
+      parameter: (sqr_tuple
+        item: (symbol)
+        item: (symbol)))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol)
+        item: (symbol))))
+  (fn
+    name: (symbol)
+    parameters: (parameters
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (number_literal)
+        item: (symbol))))
+  (fn
+    name: (short_quote
+      (symbol))
+    parameters: (parameters
+      parameter: (symbol))
+    body: (body
+      form: (short_quote
+        (symbol))))
+  (fn
+    name: (short_quote
+      (symbol))
+    parameters: (short_quote
+      (symbol))
+    body: (body
+      form: (short_quote
+        (symbol))))
+  (line_comment)
+  (line_comment)
+  (fn
+    name: (short_quote
+      (symbol))
+    parameters: (short_quote
+      (symbol))))

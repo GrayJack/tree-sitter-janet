@@ -654,7 +654,7 @@
               "name": "name",
               "content": {
                 "type": "SYMBOL",
-                "name": "_identifier"
+                "name": "_name"
               }
             },
             {
@@ -667,7 +667,7 @@
           "name": "parameters",
           "content": {
             "type": "SYMBOL",
-            "name": "parameters"
+            "name": "_parameters"
           }
         },
         {
@@ -692,6 +692,55 @@
         }
       ]
     },
+    "_parameters": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_identifier"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "quote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "splice"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "quasiquote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "unquote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_quote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_splice"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_quasiquote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_unquote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "parameters"
+          }
+        ]
+      }
+    },
     "parameters": {
       "type": "SEQ",
       "members": [
@@ -706,7 +755,7 @@
             "name": "parameter",
             "content": {
               "type": "SYMBOL",
-              "name": "symbol"
+              "name": "_expr"
             }
           }
         },
@@ -879,16 +928,24 @@
           "name": "parameters",
           "content": {
             "type": "SYMBOL",
-            "name": "parameters"
+            "name": "_parameters"
           }
         },
         {
-          "type": "FIELD",
-          "name": "body",
-          "content": {
-            "type": "SYMBOL",
-            "name": "body"
-          }
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "body",
+              "content": {
+                "type": "SYMBOL",
+                "name": "body"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1064,7 +1121,7 @@
     },
     "metadata": {
       "type": "PREC_LEFT",
-      "value": 0,
+      "value": 2,
       "content": {
         "type": "CHOICE",
         "members": [
@@ -1116,45 +1173,49 @@
       }
     },
     "_name": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "_identifier"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "quote"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "splice"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "quasiquote"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "unquote"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "short_quote"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "short_splice"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "short_quasiquote"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "short_unquote"
-        }
-      ]
+      "type": "PREC",
+      "value": 3,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_identifier"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "quote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "splice"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "quasiquote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "unquote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_quote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_splice"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_quasiquote"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "short_unquote"
+          }
+        ]
+      }
     },
     "doc_str": {
       "type": "CHOICE",

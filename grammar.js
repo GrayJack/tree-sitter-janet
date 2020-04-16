@@ -9,6 +9,12 @@ module.exports = grammar({
 
   extras: $ => [/\s/, $.line_comment],
 
+  conflicts: $ => [
+    // [$._name, $._parameters],
+    // [$.metadata, $._identifier],
+    // [$.metadata, $._parameters],
+  ],
+
   rules: {
     source_file: $ => repeat($._expr),
 
@@ -172,15 +178,21 @@ module.exports = grammar({
     fn: $ => seq(
       '(',
       'fn',
-      optional(field('name', $._identifier)),
-      field('parameters', $.parameters),
+      optional(field('name', $._name)),
+      field('parameters', $._parameters),
       optional(field('body', $.body)),
       ')'
     ),
 
+    _parameters: $ => prec(1, choice(
+      $._identifier, $.quote, $.splice, $.quasiquote, $.unquote,
+      $.short_quote, $.short_splice, $.short_quasiquote, $.short_unquote,
+      $.parameters,
+    )),
+
     parameters: $ => seq(
       '[',
-      repeat(field('parameter', $.symbol)),
+      repeat(field('parameter', $._expr)),
       ']'
     ),
 
@@ -229,8 +241,8 @@ module.exports = grammar({
       choice('defn', 'defn-', 'varfn', 'varfn-', 'defmacro', 'defmacro-'),
       field('name', $._name),
       repeat(field('metadata', $.metadata)),
-      field('parameters', $.parameters),
-      field('body', $.body),
+      field('parameters', $._parameters),
+      optional(field('body', $.body)),
       ')'
     ),
 
@@ -289,16 +301,16 @@ module.exports = grammar({
 
     // EXTRA HELPERS
 
-    metadata: $ => prec.left(choice(
+    metadata: $ => prec.left(2, choice(
       $.keyword, $.str_literal, $.long_str_literal,
       $.quote, $.splice, $.quasiquote, $.unquote,
       $.short_quote, $.short_splice, $.short_quasiquote, $.short_unquote,
     )),
 
-    _name: $ => choice(
+    _name: $ => prec(3, choice(
       $._identifier, $.quote, $.splice, $.quasiquote, $.unquote,
       $.short_quote, $.short_splice, $.short_quasiquote, $.short_unquote,
-    ),
+    )),
 
     doc_str: $ => choice($.str_literal, $.long_str_literal),
 
