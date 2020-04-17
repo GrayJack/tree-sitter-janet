@@ -65,7 +65,6 @@ build
 *.log
 examples
 !examples/ast.rs
-test.carp
-tested.carp
+test.janet
+tested.janet
 .mypy_cache
-test.carp
