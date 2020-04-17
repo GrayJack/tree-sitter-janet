@@ -1303,6 +1303,13 @@
     }
   ],
   "inline": [],
-  "supertypes": []
+  "supertypes": [
+    "_expr",
+    "_literals",
+    "_special_forms",
+    "_shorthand",
+    "_specials",
+    "_identifier"
+  ]
 }
 

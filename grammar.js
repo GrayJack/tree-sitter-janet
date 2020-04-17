@@ -9,10 +9,15 @@ module.exports = grammar({
 
   extras: $ => [/\s/, $.line_comment],
 
-  conflicts: $ => [
-    // [$._name, $._parameters],
-    // [$.metadata, $._identifier],
-    // [$.metadata, $._parameters],
+  conflicts: $ => [],
+
+  supertypes: $ => [
+    $._expr,
+    $._literals,
+    $._special_forms,
+    $._shorthand,
+    $._specials,
+    $._identifier,
   ],
 
   rules: {
