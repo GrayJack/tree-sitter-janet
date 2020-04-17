@@ -72,8 +72,7 @@ line"
 
 (source_file
   (str_literal)
-  (str_literal
-    (escape_sequence))
+  (str_literal)
   (str_literal))
 
 ============================================

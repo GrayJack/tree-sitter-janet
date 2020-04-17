@@ -72,10 +72,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -217,10 +213,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -373,10 +365,6 @@
           "named": true
         },
         {
-          "type": "scoped_symbol",
-          "named": true
-        },
-        {
           "type": "set",
           "named": true
         },
@@ -442,21 +430,6 @@
         },
         {
           "type": "while",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "buffer_literal",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_sequence",
           "named": true
         }
       ]
@@ -542,10 +515,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -687,10 +656,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -819,10 +784,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "short_quasiquote",
             "named": true
           },
@@ -870,10 +831,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -939,10 +896,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "short_quasiquote",
             "named": true
           },
@@ -990,10 +943,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -1098,10 +1047,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -1243,10 +1188,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -1382,10 +1323,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -1603,10 +1540,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -1748,10 +1681,6 @@
         },
         {
           "type": "quote",
-          "named": true
-        },
-        {
-          "type": "scoped_symbol",
           "named": true
         },
         {
@@ -1898,10 +1827,6 @@
           "named": true
         },
         {
-          "type": "scoped_symbol",
-          "named": true
-        },
-        {
           "type": "set",
           "named": true
         },
@@ -1967,40 +1892,6 @@
         },
         {
           "type": "while",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "scoped_symbol",
-    "named": true,
-    "fields": {
-      "path": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "module_keyword",
-            "named": true
-          },
-          {
-            "type": "module_symbol",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "scoped_symbol",
-          "named": true
-        },
-        {
-          "type": "symbol",
           "named": true
         }
       ]
@@ -2076,10 +1967,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -2218,10 +2105,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -2369,10 +2252,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -2514,10 +2393,6 @@
         },
         {
           "type": "quote",
-          "named": true
-        },
-        {
-          "type": "scoped_symbol",
           "named": true
         },
         {
@@ -2664,10 +2539,6 @@
           "named": true
         },
         {
-          "type": "scoped_symbol",
-          "named": true
-        },
-        {
           "type": "set",
           "named": true
         },
@@ -2808,10 +2679,6 @@
         },
         {
           "type": "quote",
-          "named": true
-        },
-        {
-          "type": "scoped_symbol",
           "named": true
         },
         {
@@ -2958,10 +2825,6 @@
           "named": true
         },
         {
-          "type": "scoped_symbol",
-          "named": true
-        },
-        {
           "type": "set",
           "named": true
         },
@@ -3102,10 +2965,6 @@
         },
         {
           "type": "quote",
-          "named": true
-        },
-        {
-          "type": "scoped_symbol",
           "named": true
         },
         {
@@ -3252,10 +3111,6 @@
           "named": true
         },
         {
-          "type": "scoped_symbol",
-          "named": true
-        },
-        {
           "type": "set",
           "named": true
         },
@@ -3396,10 +3251,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -3547,10 +3398,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -3623,21 +3470,6 @@
     }
   },
   {
-    "type": "str_literal",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_sequence",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "struct",
     "named": true,
     "fields": {
@@ -3707,10 +3539,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -3849,10 +3677,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -4000,10 +3824,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -4139,10 +3959,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -4290,10 +4106,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -4435,10 +4247,6 @@
         },
         {
           "type": "quote",
-          "named": true
-        },
-        {
-          "type": "scoped_symbol",
           "named": true
         },
         {
@@ -4595,10 +4403,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -4734,10 +4538,6 @@
           },
           {
             "type": "quote",
-            "named": true
-          },
-          {
-            "type": "scoped_symbol",
             "named": true
           },
           {
@@ -4885,10 +4685,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -5027,10 +4823,6 @@
             "named": true
           },
           {
-            "type": "scoped_symbol",
-            "named": true
-          },
-          {
             "type": "set",
             "named": true
           },
@@ -5103,10 +4895,6 @@
     }
   },
   {
-    "type": "\"",
-    "named": false
-  },
-  {
     "type": "'",
     "named": false
   },
@@ -5123,15 +4911,7 @@
     "named": false
   },
   {
-    "type": "/",
-    "named": false
-  },
-  {
     "type": ";",
-    "named": false
-  },
-  {
-    "type": "@\"",
     "named": false
   },
   {
@@ -5159,6 +4939,10 @@
     "named": false
   },
   {
+    "type": "buffer_literal",
+    "named": true
+  },
+  {
     "type": "def",
     "named": false
   },
@@ -5183,10 +4967,6 @@
     "named": false
   },
   {
-    "type": "escape_sequence",
-    "named": true
-  },
-  {
     "type": "false",
     "named": false
   },
@@ -5200,14 +4980,6 @@
   },
   {
     "type": "keyword",
-    "named": true
-  },
-  {
-    "type": "module_keyword",
-    "named": true
-  },
-  {
-    "type": "module_symbol",
     "named": true
   },
   {
@@ -5229,6 +5001,10 @@
   {
     "type": "splice",
     "named": false
+  },
+  {
+    "type": "str_literal",
+    "named": true
   },
   {
     "type": "symbol",

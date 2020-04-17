@@ -139,9 +139,7 @@ Def
       item: (short_unquote
         (short_splice
           (tuple
-            item: (scoped_symbol
-              path: (module_symbol)
-              (symbol))
+            item: (symbol)
             item: (symbol)
             item: (symbol)))))))
 
@@ -289,9 +287,7 @@ Var
       item: (short_unquote
         (short_splice
           (tuple
-            item: (scoped_symbol
-              path: (module_symbol)
-              (symbol))
+            item: (symbol)
             item: (symbol)
             item: (symbol)))))))
 

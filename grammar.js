@@ -256,25 +256,31 @@ module.exports = grammar({
       $.long_buffer_literal,
     ),
 
-    str_literal: $ => seq(
+    str_literal: $ => token(seq(
       '"',
       repeat(choice(
         /[^"\\]+/,
-        $.escape_sequence,
+        /\\[^xu]/,
+        /\\u[0-9a-fA-F]{4}/,
+        /\\u{[0-9a-fA-F]+}/,
+        /\\x[0-9a-fA-F]{2}/
       )),
       '"'
-    ),
+    )),
 
     long_str_literal: $ => $._long_str,
 
-    buffer_literal: $ => seq(
+    buffer_literal: $ => token(seq(
       '@"',
       repeat(choice(
         /[^"\\]+/,
-        $.escape_sequence,
+        /\\[^xu]/,
+        /\\u[0-9a-fA-F]{4}/,
+        /\\u{[0-9a-fA-F]+}/,
+        /\\x[0-9a-fA-F]{2}/
       )),
       '"'
-    ),
+    )),
 
     long_buffer_literal: $ => $._long_buffer,
 
@@ -288,15 +294,11 @@ module.exports = grammar({
 
     nil_literal: $ => 'nil',
 
-    escape_sequence: $ => token.immediate(
-      seq('\\',
-        choice(
-          /[^xu]/,
-          /u[0-9a-fA-F]{4}/,
-          /u{[0-9a-fA-F]+}/,
-          /x[0-9a-fA-F]{2}/
-        )
-      )
+    escape_sequence: $ => choice(
+        /\\[^xu]/,
+        /\\u[0-9a-fA-F]{4}/,
+        /\\u{[0-9a-fA-F]+}/,
+        /\\x[0-9a-fA-F]{2}/
     ),
 
     // EXTRA HELPERS
@@ -317,18 +319,9 @@ module.exports = grammar({
     body: $ => repeat1(field('form', $._expr)),
 
     // identifier
-    _identifier: $ => choice($.symbol, $.keyword, $.scoped_symbol),
-
-    scoped_symbol: $ => seq(
-      field('path', choice(
-        alias($.symbol, $.module_symbol),
-        alias($.keyword, $.module_keyword),
-      )),
-      '/',
-      choice($.scoped_symbol, $.symbol),
-    ),
+    _identifier: $ => choice($.symbol, $.keyword),
 
     keyword: $ => /:[a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
-    symbol: $ => /[a-zA-Zα-ωΑ-Ωµ!@$%^&*_+=<>.?\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
+    symbol: $ => /[a-zA-Zα-ωΑ-Ωµ!@$%^&/*_+=<>.?\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&/*_+=|~:<>.?\\-]*/,
   }
 });
