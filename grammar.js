@@ -152,7 +152,7 @@ module.exports = grammar({
       '(',
       'set',
       field('l_value', $._expr),
-      field('r_value', $._expr),
+      optional(field('r_value', $._expr)),
       ')'
     ),
 

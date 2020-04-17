@@ -433,6 +433,10 @@ Set
 (set x nil)
 (set (tab :property) "hello")
 
+# Hacky
+(set x)
+(set "str")
+
 ---
 
 (source_file
@@ -446,7 +450,12 @@ Set
     l_value: (tuple
       item: (symbol)
       item: (keyword))
-    r_value: (str_literal)))
+    r_value: (str_literal))
+  (line_comment)
+  (set
+    l_value: (symbol))
+  (set
+    l_value: (str_literal)))
 
 ============================================
 If

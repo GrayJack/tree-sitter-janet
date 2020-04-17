@@ -504,12 +504,20 @@
           }
         },
         {
-          "type": "FIELD",
-          "name": "r_value",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_expr"
-          }
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "r_value",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_expr"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
