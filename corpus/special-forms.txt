@@ -567,6 +567,13 @@ While
 Fn
 ============================================
 
+(fn ())
+(fn () x)
+(fn identity () x)
+(fn () 1 2 3 4 5)
+(fn (x y) (+ x y))
+(fn (& args) (length args))
+
 (fn [])
 (fn [x] x)
 (fn identity [x] x)
@@ -585,6 +592,42 @@ Fn
 ---
 
 (source_file
+  (fn
+    parameters: (tuple_parameters))
+  (fn
+    parameters: (tuple_parameters)
+    body: (body
+      form: (symbol)))
+  (fn
+    name: (symbol)
+    parameters: (tuple_parameters)
+    body: (body
+      form: (symbol)))
+  (fn
+    parameters: (tuple_parameters)
+    body: (body
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)
+      form: (number_literal)))
+  (fn
+    parameters: (tuple_parameters
+      parameter: (symbol)
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol)
+        item: (symbol))))
+  (fn
+    parameters: (tuple_parameters
+      parameter: (symbol)
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol))))
   (fn
     parameters: (parameters))
   (fn

@@ -8,6 +8,17 @@ syn*
 syn
 :key
 
+α
+β
+🔥
+🐃
+🐼
+
+:τ
+:🎷
+:❌
+:👻
+
 ---
 
 (source_file
@@ -15,6 +26,15 @@ syn
   (symbol)
   (symbol)
   (symbol)
+  (keyword)
+  (symbol)
+  (symbol)
+  (symbol)
+  (symbol)
+  (symbol)
+  (keyword)
+  (keyword)
+  (keyword)
   (keyword))
 
 ============================================

@@ -737,6 +737,10 @@
           {
             "type": "SYMBOL",
             "name": "parameters"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "tuple_parameters"
           }
         ]
       }
@@ -762,6 +766,30 @@
         {
           "type": "STRING",
           "value": "]"
+        }
+      ]
+    },
+    "tuple_parameters": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "FIELD",
+            "name": "parameter",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            }
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     },
@@ -1274,11 +1302,11 @@
     },
     "keyword": {
       "type": "PATTERN",
-      "value": ":[a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\\\-]*"
+      "value": ":[^({\\[\"'|`;,~\\]}\\s)]*"
     },
     "symbol": {
       "type": "PATTERN",
-      "value": "[a-zA-Zα-ωΑ-Ωµ!@$%^&/*_+=<>.?\\\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&/*_+=|~:<>.?\\\\-]*"
+      "value": "[^({\\[\"'|`;,~\\]}\\s):][^({\\[\"'|`;,~\\]}\\s)]*"
     }
   },
   "extras": [

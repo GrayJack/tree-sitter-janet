@@ -398,6 +398,10 @@
             "named": true
           },
           {
+            "type": "tuple_parameters",
+            "named": true
+          },
+          {
             "type": "unquote",
             "named": true
           }
@@ -499,6 +503,10 @@
           },
           {
             "type": "splice",
+            "named": true
+          },
+          {
+            "type": "tuple_parameters",
             "named": true
           },
           {
@@ -882,6 +890,22 @@
     "named": true,
     "fields": {
       "item": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "tuple_parameters",
+    "named": true,
+    "fields": {
+      "parameter": {
         "multiple": true,
         "required": false,
         "types": [

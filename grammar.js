@@ -192,13 +192,19 @@ module.exports = grammar({
     _parameters: $ => prec(1, choice(
       $._identifier, $.quote, $.splice, $.quasiquote, $.unquote,
       $.short_quote, $.short_splice, $.short_quasiquote, $.short_unquote,
-      $.parameters,
+      $.parameters, $.tuple_parameters,
     )),
 
     parameters: $ => seq(
       '[',
       repeat(field('parameter', $._expr)),
       ']'
+    ),
+
+    tuple_parameters: $ => seq(
+      '(',
+      repeat(field('parameter', $._expr)),
+      ')'
     ),
 
     _shorthand: $ => choice(
@@ -326,7 +332,9 @@ module.exports = grammar({
     // identifier
     _identifier: $ => choice($.symbol, $.keyword),
 
-    keyword: $ => /:[a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
-    symbol: $ => /[a-zA-Zα-ωΑ-Ωµ!@$%^&/*_+=<>.?\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&/*_+=|~:<>.?\\-]*/,
+    // keyword: $ => /:[a-zA-Zα-ωΑ-Ω0-9µ!@$%^&*_+=|~:<>.?\\-]*/,
+    // symbol: $ => /[a-zA-Zα-ωΑ-Ωµ!@$%^&/*_+=<>.?\\-][a-zA-Zα-ωΑ-Ω0-9µ!@$%^&/*_+=|~:<>.?\\-]*/,
+    keyword: $ => /:[^({\["'|`;,~\]}\s)]*/,
+    symbol: $ => /[^({\["'|`;,~\]}\s):][^({\["'|`;,~\]}\s)]*/
   }
 });
