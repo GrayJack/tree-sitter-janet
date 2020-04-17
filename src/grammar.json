@@ -1,5 +1,6 @@
 {
   "name": "janet",
+  "word": "symbol",
   "rules": {
     "source_file": {
       "type": "REPEAT",

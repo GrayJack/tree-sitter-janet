@@ -1,7 +1,3 @@
-const PREC = {
-
-}
-
 module.exports = grammar({
   name: 'janet',
 
@@ -10,6 +6,8 @@ module.exports = grammar({
   extras: $ => [/\s/, $.line_comment],
 
   conflicts: $ => [],
+
+  word: $ => $.symbol,
 
   supertypes: $ => [
     $._expr,
