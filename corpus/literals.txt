@@ -67,10 +67,12 @@ String literal
 "Hello,\n World!"
 "Multi-
 line"
+"#HELLO"
 
 ---
 
 (source_file
+  (str_literal)
   (str_literal)
   (str_literal)
   (str_literal))
@@ -101,10 +103,12 @@ Buffer literal
 
 @""
 @"Buffer."
+@"#Buffer"
 
 ---
 
 (source_file
+  (buffer_literal)
   (buffer_literal)
   (buffer_literal))
 
