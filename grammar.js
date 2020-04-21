@@ -35,12 +35,13 @@ module.exports = grammar({
       $.sqr_tuple,
       $.struct,
       $.table,
+      $.peg_set,
     ),
 
     tuple: $ => seq(
-        '(',
-        repeat(field('item', $._expr)),
-        ')'
+      '(',
+      repeat(field('item', $._expr)),
+      ')'
     ),
 
     sqr_tuple: $ => seq(
@@ -50,9 +51,9 @@ module.exports = grammar({
     ),
 
     array: $ => seq(
-        '@(',
-        repeat(field('item', $._expr)),
-        ')'
+      '@(',
+      repeat(field('item', $._expr)),
+      ')'
     ),
 
     sqr_array: $ => seq(
@@ -76,6 +77,13 @@ module.exports = grammar({
     _struct_tables_commom: $ => seq(
       field('key', $._expr),
       field('value', $._expr),
+    ),
+
+    peg_set: $ => seq(
+      '(',
+      'set',
+      choice($.str_literal, $.long_str_literal, $.quote, $.short_quote),
+      ')'
     ),
 
     _special_forms: $ => choice(
@@ -150,7 +158,7 @@ module.exports = grammar({
       '(',
       'set',
       field('l_value', $._expr),
-      optional(field('r_value', $._expr)),
+      field('r_value', $._expr),
       ')'
     ),
 
@@ -303,12 +311,12 @@ module.exports = grammar({
 
     nil_literal: $ => 'nil',
 
-    escape_sequence: $ => choice(
+    escape_sequence: $ => token.immediate(choice(
         /\\[^xu]/,
         /\\u[0-9a-fA-F]{4}/,
         /\\u{[0-9a-fA-F]+}/,
         /\\x[0-9a-fA-F]{2}/
-    ),
+    )),
 
     // EXTRA HELPERS
 
