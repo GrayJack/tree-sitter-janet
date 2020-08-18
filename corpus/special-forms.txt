@@ -580,6 +580,8 @@ Fn
 (fn [] 1 2 3 4 5)
 (fn [x y] (+ x y))
 (fn [& args] (length args))
+(fn [&opt args] (length args))
+(fn [&keys args] (length args))
 (fn [w x y z &] (tuple w w x x y y z z))
 (fn [[a b] [c d]] (* a b c d))
 (fn with-name [x] (* 2 x))
@@ -660,7 +662,23 @@ Fn
         item: (symbol))))
   (fn
     parameters: (parameters
-      parameter: (symbol)
+      (variadic_marker)
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol))))
+  (fn
+    parameters: (parameters
+      (optional_marker)
+      parameter: (symbol))
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (symbol))))
+  (fn
+    parameters: (parameters
+      (keys_marker)
       parameter: (symbol))
     body: (body
       form: (tuple
@@ -672,7 +690,7 @@ Fn
       parameter: (symbol)
       parameter: (symbol)
       parameter: (symbol)
-      parameter: (symbol))
+      (variadic_marker))
     body: (body
       form: (tuple
         item: (symbol)

@@ -641,6 +641,24 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "keys_marker",
+          "named": true
+        },
+        {
+          "type": "optional_marker",
+          "named": true
+        },
+        {
+          "type": "variadic_marker",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1110,11 +1128,19 @@
     "named": false
   },
   {
+    "type": "keys_marker",
+    "named": true
+  },
+  {
     "type": "keyword",
     "named": true
   },
   {
     "type": "nil_literal",
+    "named": true
+  },
+  {
+    "type": "optional_marker",
     "named": true
   },
   {
@@ -1160,6 +1186,10 @@
   {
     "type": "varfn-",
     "named": false
+  },
+  {
+    "type": "variadic_marker",
+    "named": true
   },
   {
     "type": "while",

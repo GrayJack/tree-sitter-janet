@@ -204,14 +204,27 @@ module.exports = grammar({
     parameters: $ => seq(
       '[',
       repeat(field('parameter', $._expr)),
+      optional(seq(
+        choice($.variadic_marker, $.optional_marker, $.keys_marker),
+        repeat(field('parameter', $._expr)),
+      )),
       ']'
     ),
 
     tuple_parameters: $ => seq(
       '(',
       repeat(field('parameter', $._expr)),
+      optional(seq(
+        choice($.variadic_marker, $.optional_marker, $.keys_marker),
+        repeat(field('parameter', $._expr)),
+      )),
       ')'
     ),
+
+
+    variadic_marker: $ => "&",
+    optional_marker: $ => "&opt",
+    keys_marker: $ => "&keys",
 
     _shorthand: $ => choice(
       $.short_quote,
