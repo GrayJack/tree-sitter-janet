@@ -964,6 +964,24 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "keys_marker",
+          "named": true
+        },
+        {
+          "type": "optional_marker",
+          "named": true
+        },
+        {
+          "type": "variadic_marker",
+          "named": true
+        }
+      ]
     }
   },
   {

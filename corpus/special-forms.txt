@@ -624,7 +624,7 @@ Fn
         item: (symbol))))
   (fn
     parameters: (tuple_parameters
-      parameter: (symbol)
+      (variadic_marker)
       parameter: (symbol))
     body: (body
       form: (tuple
