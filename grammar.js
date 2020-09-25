@@ -122,28 +122,28 @@ module.exports = grammar({
     quote: $ => seq(
       '(',
       'quote',
-      $._expr,
+      optional($._expr),
       ')'
     ),
 
     splice: $ => seq(
       '(',
       'splice',
-      $._expr,
+      optional($._expr),
       ')'
     ),
 
     quasiquote: $ => seq(
       '(',
       'quasiquote',
-      $._expr,
+      optional($._expr),
       ')'
     ),
 
     unquote: $ => seq(
       '(',
       'unquote',
-      $._expr,
+      optional($._expr),
       ')'
     ),
 
