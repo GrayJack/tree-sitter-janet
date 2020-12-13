@@ -172,6 +172,10 @@
         "named": true
       },
       {
+        "type": "upscope",
+        "named": true
+      },
+      {
         "type": "var",
         "named": true
       },
@@ -1000,6 +1004,22 @@
     }
   },
   {
+    "type": "upscope",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "body",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "var",
     "named": true,
     "fields": {
@@ -1191,6 +1211,10 @@
   },
   {
     "type": "unquote",
+    "named": false
+  },
+  {
+    "type": "upscope",
     "named": false
   },
   {

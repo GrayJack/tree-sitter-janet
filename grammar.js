@@ -99,6 +99,7 @@ module.exports = grammar({
       $.do,
       $.while,
       $.fn,
+      $.upscope,
     ),
 
     def: $ => seq(
@@ -191,6 +192,13 @@ module.exports = grammar({
       'fn',
       optional(field('name', $._name)),
       field('parameters', $._parameters),
+      optional(field('body', $.body)),
+      ')'
+    ),
+
+    upscope: $ => seq(
+      '(',
+      'upscope',
       optional(field('body', $.body)),
       ')'
     ),
