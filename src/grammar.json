@@ -323,6 +323,10 @@
         {
           "type": "SYMBOL",
           "name": "fn"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "upscope"
         }
       ]
     },
@@ -744,6 +748,39 @@
             "type": "SYMBOL",
             "name": "_parameters"
           }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "body",
+              "content": {
+                "type": "SYMBOL",
+                "name": "body"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "upscope": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "STRING",
+          "value": "upscope"
         },
         {
           "type": "CHOICE",

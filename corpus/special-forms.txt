@@ -749,3 +749,28 @@ Fn
       (symbol))
     parameters: (short_quote
       (symbol))))
+
+============================================
+Upscope
+============================================
+
+(upscope)
+(upscope 1)
+(upscope (print "hi") (+ 8 1))
+
+---
+
+(source_file
+  (upscope)
+  (upscope
+    body: (body
+      form: (number_literal)))
+  (upscope
+    body: (body
+      form: (tuple
+        item: (symbol)
+        item: (str_literal))
+      form: (tuple
+        item: (symbol)
+        item: (number_literal)
+        item: (number_literal)))))
