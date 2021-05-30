@@ -217,7 +217,7 @@
     "fields": {
       "form": {
         "multiple": true,
-        "required": false,
+        "required": true,
         "types": [
           {
             "type": "_expr",
@@ -1171,6 +1171,10 @@
   },
   {
     "type": "keyword",
+    "named": true
+  },
+  {
+    "type": "line_comment",
     "named": true
   },
   {
