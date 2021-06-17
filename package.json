@@ -27,5 +27,13 @@
   },
   "devDependencies": {
     "tree-sitter-cli": "^0.19.5"
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.janet",
+      "file-types": [
+        "janet"
+      ]
+    }
+  ]
 }
