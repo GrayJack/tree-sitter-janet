@@ -342,7 +342,7 @@ module.exports = grammar({
     // EXTRA HELPERS
 
     metadata: $ => prec.left(2, choice(
-      $.keyword, $.str_literal, $.long_str_literal,
+      $.keyword, $.str_literal, $.long_str_literal, $.struct,
       $.quote, $.splice, $.quasiquote, $.unquote,
       $.short_quote, $.short_splice, $.short_quasiquote, $.short_unquote,
     )),

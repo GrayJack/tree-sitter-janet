@@ -620,6 +620,10 @@
           "named": true
         },
         {
+          "type": "struct",
+          "named": true
+        },
+        {
           "type": "unquote",
           "named": true
         }

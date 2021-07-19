@@ -1394,6 +1394,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "struct"
+          },
+          {
+            "type": "SYMBOL",
             "name": "quote"
           },
           {

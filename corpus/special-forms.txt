@@ -9,6 +9,7 @@ Def
 
 (def [a b c] (range 10))
 (def {:x x} @{:x (+ 1 2)})
+(def {:x x} {:deprecated :strict} @{:x (+ 1 2)})
 (def [y {:x x}] @[:hi @{:x (+ 1 2)}])
 
 (def mydef :private 3)
@@ -68,6 +69,20 @@ Def
         item: (symbol)
         item: (number_literal)
         item: (number_literal))))
+  (def
+    name: (struct
+      key: (keyword)
+      value: (symbol ))
+    metadata: (metadata
+      (struct
+        key: (keyword)
+        value: (keyword)))
+    value: (table
+      key: (keyword)
+      value: (tuple
+        item: (symbol)
+        item: (number_literal)
+        item: (number_literal ))))
   (def
     name: (sqr_tuple
       item: (symbol)
