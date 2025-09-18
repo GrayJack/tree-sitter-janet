@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "janet",
   "word": "symbol",
   "rules": {
@@ -1248,7 +1249,7 @@
                 },
                 {
                   "type": "PATTERN",
-                  "value": "\\\\u{[0-9a-fA-F]+}"
+                  "value": "\\\\u[0-9a-fA-F]+"
                 },
                 {
                   "type": "PATTERN",
@@ -1296,7 +1297,7 @@
                 },
                 {
                   "type": "PATTERN",
-                  "value": "\\\\u{[0-9a-fA-F]+}"
+                  "value": "\\\\u[0-9a-fA-F]+"
                 },
                 {
                   "type": "PATTERN",
@@ -1365,7 +1366,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "\\\\u{[0-9a-fA-F]+}"
+            "value": "\\\\u[0-9a-fA-F]+"
           },
           {
             "type": "PATTERN",
@@ -1552,6 +1553,6 @@
     "_shorthand",
     "_specials",
     "_identifier"
-  ]
+  ],
+  "reserved": {}
 }
-

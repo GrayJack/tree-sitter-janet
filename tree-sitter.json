@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "janet",
+      "camelcase": "Janet",
+      "title": "Janet",
+      "scope": "source.janet",
+      "file-types": [
+        "janet"
+      ],
+      "injection-regex": "^janet$",
+      "class-name": "TreeSitterJanet"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "BSD 3-Clause",
+    "description": "Tree-sitter parser for the Janet Programming Language",
+    "authors": [
+      {
+        "name": "GrayJack",
+        "email": "gr41.j4ck@gmail.com",
+        "url": "https://github.com/GrayJack"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/GrayJack/tree-sitter-janet",
+      "funding": "https://github.com/sponsors/GrayJack"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
